@@ -1,0 +1,70 @@
+.wallet-new-deposit {
+	.network {
+		margin-top: 16px;
+		font-size: 12px;
+		line-height: 1;
+		margin-bottom: 15px;
+	}
+
+	.note {
+		margin-top: 16px;
+		margin-bottom: 20px;
+
+		span {
+			font-weight: 600;
+		}
+	}
+
+	.address {
+		.title {
+			font-size: 24px;
+			text-align: center;
+			font-weight: 500;
+			margin-bottom: 8px;
+		}
+
+		.qr {
+			padding: 3px;
+			background: #fff;
+			width: 50%;
+			margin: auto;
+			max-width: 150px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.input {
+			width: 100%;
+			border-radius: 5px;
+			background-color: #fff;
+			font-size: 14px;
+			border: 1px solid #4d4e4e;
+			padding: 5px 11px;
+			margin-top: 20px;
+
+			input {
+				border: none;
+				background: transparent;
+				outline: none;
+				width: 100%;
+				color: #000;
+				text-align: center;
+			}
+		}
+	}
+
+	.minimum {
+		color: #fff;
+		display: block;
+		font-style: italic;
+		padding: 10px;
+		margin: auto;
+		width: fit-content;
+	}
+
+	.copy {
+		display: flex;
+		justify-content: center;
+	}
+}

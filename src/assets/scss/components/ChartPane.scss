@@ -1,0 +1,565 @@
+@import "../base/base.scss";
+
+.chartpane {
+  width: 210px !important;
+  padding: 10px;
+  margin-top: -40px;
+  border-left: 2px solid black;
+
+  @media screen and (max-width: 992px) {
+    width: 100% !important;
+    padding: 5px !important;
+  }
+
+  .amount {
+    .subtitle {
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .amount-line-1 {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      .input-center-desktop {
+        background-color: whitesmoke !important;
+        color: black !important;
+      }
+
+      #chart-pane-input-amount-number {
+        // text-align: center;
+        width: 100% !important;
+        font-weight: 500;
+        font-size: 16px;
+        background-color: whitesmoke !important;
+        color: black !important;
+        border: none;
+        outline: none;
+      }
+
+      button.amount-line-1-add,
+      button.amount-line-1-subtract {
+        border: none;
+        outline: none;
+        background-color: $main-light-over-dark;
+        color: white;
+        border-radius: 5px;
+        overflow: hidden;
+        align-self: stretch;
+        width: 40px !important;
+        height: 40px;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.15s ease;
+      }
+
+      button.amount-line-1-subtract.disabled {
+        cursor: not-allowed;
+        user-select: none;
+        opacity: 0.3;
+
+        &:hover {
+          background-color: $main-light-over-dark;
+          color: white;
+          opacity: 0.3;
+        }
+      }
+    }
+
+    .btn-group {
+      margin-top: 5px;
+
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 5px;
+
+      .btn-child-op {
+        border: none;
+        outline: none;
+        background-color: $main-light-over-dark;
+        color: white;
+        border-radius: 10px;
+        overflow: hidden;
+        width: 100%;
+        height: 36px;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.15s ease;
+
+        &:hover {
+          background-image: $grad;
+          color: black;
+        }
+      }
+      .btn-child-op.disabled {
+        cursor: not-allowed;
+        user-select: none;
+        opacity: 0.3;
+
+        &:hover {
+          background: $grad;
+          color: white;
+          opacity: 0.3;
+        }
+      }
+    }
+  }
+
+  .amount-mobile {
+    margin-top: -5px;
+    height: 40px !important;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+
+    .input-center {
+      grid-column: 2 / span 3;
+      background-color: whitesmoke !important;
+    }
+
+    button.amount-line-1-add,
+    button.amount-line-1-subtract {
+      border: none;
+      outline: none;
+      background-color: #02142b;
+      color: white;
+      border-radius: 5px;
+      overflow: hidden;
+      align-self: stretch;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.15s ease;
+
+      &:hover {
+        background-color: $primary-color;
+        color: black;
+      }
+    }
+
+    button.amount-line-1-subtract.disabled {
+      cursor: not-allowed;
+      user-select: none;
+      opacity: 0.3;
+
+      &:hover {
+        background-color: $main-light-over-dark;
+        color: white;
+        opacity: 0.3;
+      }
+    }
+
+    #chart-pane-input-amount-number {
+      height: 38px;
+      line-height: 38px;
+      padding-inline: 0px;
+      font-weight: 500;
+      font-size: 16px;
+      background-color: whitesmoke !important;
+      color: black !important;
+      border: none;
+      outline: none;
+    }
+  }
+
+  .profit {
+    margin-top: 15px;
+    background-color: $bg;
+    color: white;
+
+    .subtitle {
+      font-weight: 400;
+      text-align: center;
+      font-size: 14px;
+
+      span {
+        font-weight: 500;
+        font-size: 20px;
+        display: inline-block;
+        margin-left: 10px;
+        transform: translateY(2px);
+      }
+    }
+
+    .profit-value {
+      text-align: center;
+      font-size: 30px;
+      font-weight: bold;
+      color: #01b58c;
+    }
+  }
+
+  .profit-mobile {
+    background-color: $bg;
+    color: white;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
+    .subtitle {
+      font-size: 14px;
+      font-weight: normal;
+      text-align: center;
+
+      span {
+        color: white;
+        font-weight: normal;
+        font-size: 20px;
+        display: inline-block;
+        margin-left: 10px;
+        transform: translateY(1px);
+      }
+    }
+
+    .profit-value {
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      color: rgb(1, 181, 140);
+      transform: translateY(1px);
+    }
+  }
+
+  .trader {
+    margin-top: 8px;
+
+    .subtitle {
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    .span-group {
+      margin-top: -5px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .span1 {
+        font-weight: 500;
+        color: $green;
+      }
+
+      .span2 {
+        font-weight: 500;
+        color: $red;
+      }
+    }
+  }
+
+  .trader-mobile {
+    transform: rotate(90deg);
+    position: absolute;
+    top: calc(((100vh - 560px) / 2) + 50px);
+    left: calc(((100vh - 560px) / 2 - 15px) * -1);
+    width: calc(100vh - 560px);
+    height: fit-content;
+
+    @media screen and (max-height: 700px) {
+      width: 190px;
+      top: 135px;
+      left: -80px;
+    }
+
+    background-color: transparent;
+    z-index: 99;
+
+    .span-group {
+      margin-top: -8px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .span1 {
+        color: $green;
+        transform: rotate(270deg) translateY(-30px) translateX(25px);
+        font-size: 12px;
+      }
+
+      .span2 {
+        color: $red;
+        transform: rotate(270deg) translateY(30px) translateX(25px);
+        font-size: 12px;
+      }
+    }
+  }
+
+  .action-mobile {
+    margin-top: 6px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+
+    .buy-mobile {
+      background-color: $green;
+      text-align: center;
+      padding: 2px 0;
+      border-radius: 10px;
+      height: 47px;
+
+      color: white;
+      font-size: 17px;
+      font-weight: 600;
+
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 6px;
+
+      user-select: none;
+      cursor: pointer;
+
+      i.fa-arrow-trend-up,
+      i.fa-arrow-trend-down {
+        margin-left: 8px;
+      }
+
+      &:hover {
+        background-color: $green-light;
+      }
+    }
+
+    .sell-mobile {
+      background-color: $red;
+      text-align: center;
+      padding: 2px 0;
+      border-radius: 10px;
+      height: 47px;
+
+      color: white;
+      font-size: 17px;
+      font-weight: 600;
+
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 6px;
+
+      user-select: none;
+      cursor: pointer;
+
+      i.fa-arrow-trend-up,
+      i.fa-arrow-trend-down {
+        margin-left: 8px;
+      }
+
+      &:hover {
+        background-color: $red-light;
+      }
+    }
+
+    .buy-mobile.box.disable,
+    .sell-mobile.box.disable {
+      user-select: none;
+      pointer-events: none;
+      cursor: not-allowed;
+      background-color: #8b8d96;
+    }
+
+    .order-mobile {
+      font-size: 16px;
+      background-color: $main-light-over-dark;
+      border-radius: 10px;
+      padding: 2px 0;
+      height: 47px;
+      font-size: 14px;
+      color: white;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .ob-counter {
+        margin-top: -4px;
+        font-weight: bold;
+        font-size: 18px;
+      }
+    }
+  }
+
+  .buy,
+  .sell {
+    margin-top: 20px;
+    background-color: $green;
+    padding: 10px 20px;
+    border-radius: 10px;
+    height: 60px;
+
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    user-select: none;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $green-light;
+    }
+  }
+
+  .sell {
+    margin-top: 12px;
+    background-color: $red;
+
+    &:hover {
+      background-color: $red-light;
+    }
+  }
+
+  .buy.box.disable,
+  .sell.box.disable {
+    user-select: none;
+    cursor: not-allowed;
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+
+  .buy.admin,
+  .sell.admin {
+    justify-content: center;
+  }
+
+  .order {
+    margin-top: 12px;
+    padding: 2px 20px !important;
+    height: 60px;
+
+    font-size: 14px;
+    font-weight: normal;
+    background-color: $main-light-over-dark;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .ob-counter {
+      margin-top: -4px;
+      font-weight: bold;
+      font-size: 18px;
+    }
+  }
+
+  .order.green {
+    color: whitesmoke;
+  }
+
+  .order.red {
+    color: whitesmoke;
+  }
+}
+
+.chartpane-admin {
+  .buy,
+  .sell {
+    background-color: $green;
+    padding: 10px 20px;
+
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    user-select: none;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $green-light;
+    }
+  }
+
+  .sell {
+    margin-top: 5px;
+    background-color: $red;
+
+    &:hover {
+      background-color: $red-light;
+    }
+  }
+
+  .buy.box.disable,
+  .sell.box.disable {
+    opacity: 0.5;
+    user-select: none;
+    pointer-events: none;
+  }
+
+  .order {
+    margin-top: 5px;
+    padding: 10px 20px !important;
+    background: transparent !important;
+
+    font-size: 18px;
+    font-weight: 600;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .order.green {
+    color: $green;
+  }
+
+  .order.red {
+    color: $red;
+  }
+
+  @media screen and (max-width: 1200px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .order {
+      margin-top: 0;
+      padding: 0 !important;
+
+      span:last-child {
+        margin-top: -5px;
+      }
+
+      font-size: 15px;
+      font-weight: 600;
+    }
+    .buy,
+    .sell {
+      margin-top: 0;
+      width: 200px;
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    .buy,
+    .sell {
+      width: 120px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .buy,
+    .sell {
+      width: unset;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+.profile-change-pass-group {
+	&:focus-within {
+		label {
+			font-size: 14px !important;
+		}
+	}
+
+	label {
+		color: #ffffffd9;
+		font-size: 16px;
+		transition: font-size .2s;
+	}
+
+	.input-container {
+		background: #fff;
+		position: relative;
+		padding: 7px 10px;
+		border-radius: 4px;
+
+		input {
+			outline: 0;
+			border: 0;
+			background: transparent;
+			width: 100%;
+			font-size: 16px;
+			padding-right: 30px;
+			color: #333333;
+		}
+
+		i {
+			position: absolute;
+			font-size: 16px;
+			color: #333333;
+			top: 50%;
+			right: 10px;
+			transform: translateY(-50%);
+			cursor: pointer;
+		}
+	}
+
+	.error {
+		color: #fa2843;
+		font-size: 12px;
+	}
+}

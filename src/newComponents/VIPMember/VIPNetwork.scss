@@ -1,0 +1,162 @@
+.vip-network-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 30px auto;
+
+  @media screen and (max-width: 320px) {
+    display: none;
+  }
+
+  animation: fadeInUp;
+  animation-duration: 0.5s;
+
+  .ant-radio-button.ant-radio-button-checked {
+    color: black;
+    background-color: $primary-color;
+  }
+
+  .title {
+    h1 {
+      font-size: 22px;
+      font-weight: bold;
+      color: white;
+    }
+  }
+
+  .search-area {
+    margin-top: 25px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 15px;
+    }
+
+    .search-type {
+      display: flex;
+      flex-direction: column;
+
+      p {
+        font-size: 15px;
+        margin-bottom: 6px;
+      }
+    }
+
+    .divider {
+      margin-inline: 30px;
+      width: 1px;
+      height: 45px;
+      align-self: flex-end;
+      background-color: $main-light-over-dark;
+
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+    }
+
+    .search-main {
+      .search-by-level,
+      .search-by-username {
+        p {
+          font-size: 15px;
+          margin-bottom: 6px;
+        }
+      }
+    }
+
+    button {
+      align-self: flex-end;
+      font-weight: bold;
+
+      @media screen and (max-width: 768px) {
+        align-self: flex-start;
+      }
+    }
+  }
+
+  .search-result {
+    margin-top: 25px;
+
+    .time-range {
+      text-align: right;
+      margin-bottom: 10px;
+    }
+
+    .vip-network-table-2 {
+      .t2-row {
+        background: $bg;
+      }
+      .t2-row td {
+        color: whitesmoke;
+        font-size: 14px;
+      }
+      .ant-table-thead > tr > th {
+        background: $main-dark !important;
+        color: whitesmoke;
+        font-size: 14px;
+        font-weight: 600;
+      }
+      .ant-table-placeholder {
+        background: $bg;
+      }
+    }
+  }
+
+  .list-user-f1 {
+    margin-top: 50px;
+
+    h4 {
+      font-size: 22px;
+      font-weight: bold;
+      color: white;
+    }
+
+    .vip-network-table-1 {
+      .t1-row {
+        background: $bg;
+      }
+      .t1-row td {
+        color: whitesmoke;
+        font-size: 14px;
+      }
+      .ant-table-thead > tr > th {
+        background: $main-dark !important;
+        color: whitesmoke;
+        font-size: 14px;
+        font-weight: 600;
+      }
+      .ant-table-placeholder {
+        background: $bg;
+      }
+    }
+
+    .vip-network-pagination {
+      margin-top: 20px;
+      margin-bottom: 100px;
+      text-align: center;
+
+      li {
+        border-radius: 50%;
+
+        button {
+          border-radius: 50%;
+        }
+      }
+
+      .ant-pagination-item-active {
+        background-color: $primary-color;
+
+        a {
+          color: black;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}

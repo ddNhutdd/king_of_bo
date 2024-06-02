@@ -1,0 +1,50 @@
+$main-dark: #02142b;
+$main-light-over-dark: rgba(255, 255, 255, 0.1);
+$bg: #011022;
+
+$primary-color: #0897e7;
+$primary-color-light: #3aaef0;
+$primary-color-dark: #0288d5;
+
+$green: #23c15f;
+$green-dark: #1c7749;
+$green-light: #37ce71;
+$green-light2: #effff7;
+
+$red: #fa2843;
+$red-dark: #c33838;
+$red-light: #e73951;
+$red-light2: #ffeeee;
+
+$navbar-height: 65px;
+$sidebar-width: 105px;
+$sidebar-in-drawer-width: 280px;
+
+$t: #0a0a0a;
+
+$dark-bg: black;
+$dark-text: white;
+
+$light-bg: white;
+$light-text: black;
+
+$grad: linear-gradient(180deg, #0093e9 0, #5c8d87);
+$grad-hover: linear-gradient(180deg, #0199f1 0, #50837d);
+
+.box {
+  background-color: $light-bg;
+  color: $light-text;
+  border-radius: 5px;
+  padding: 30px;
+}
+
+.box.dark {
+  background-color: $dark-bg;
+  color: $dark-text;
+  border-radius: 5px;
+  padding: 30px;
+}
+
+h2.title.dark {
+  color: white !important;
+}

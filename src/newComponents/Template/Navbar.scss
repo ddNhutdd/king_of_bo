@@ -1,0 +1,661 @@
+@import "../../assets/scss/base/base.scss";
+
+.botrade-navbar {
+  width: 100%;
+  height: $navbar-height;
+  min-height: $navbar-height;
+  max-height: $navbar-height;
+
+  background-color: $main_dark;
+  padding: 5px 15px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+
+  @media screen and (max-width: 992px) {
+    height: 56px;
+    min-height: 56px;
+    max-height: 56px;
+  }
+
+  .botrade-logo {
+    img {
+      width: 141px;
+      height: 40px;
+      cursor: pointer;
+    }
+
+    i {
+      font-size: 22px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      color: white;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+
+  .botrade-action {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+
+    .prize-pool {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+
+      width: fit-content;
+      height: fit-content;
+      border: 1px solid #592ae6;
+      border-radius: 10px;
+      background: linear-gradient(133deg, #020024, #290c7e 0, #592ae6);
+      position: relative;
+
+      img {
+        width: 55px;
+        height: 55px;
+        object-fit: cover;
+        object-position: center;
+
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: -30px;
+
+        cursor: pointer;
+      }
+
+      .pp-content {
+        padding: 0 12px 0 30px;
+        user-select: none;
+        cursor: pointer;
+
+        p {
+          color: white;
+          font-size: 9px;
+          font-weight: 600;
+          margin-top: 2px;
+          margin-bottom: 0;
+        }
+
+        span {
+          margin-top: -2px;
+
+          display: block;
+          color: #f7a62f;
+          font-size: 15px;
+          font-weight: bold;
+        }
+      }
+    }
+
+    .balance {
+      background-color: $main-light-over-dark;
+      border-radius: 10px;
+      padding: 5px 20px;
+      font-size: 12px;
+      color: white;
+
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+
+      margin-left: 15px;
+
+      @media screen and (max-width: 576px) {
+        margin-left: 5px;
+      }
+
+      .left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+
+        span.text {
+          font-size: 9px;
+        }
+
+        span.num {
+          font-weight: 600;
+          margin-top: -2px;
+          font-size: 15px;
+
+          @media screen and (max-width: 576px) {
+            font-size: 13px;
+          }
+        }
+      }
+
+      .right {
+        margin-left: 15px;
+
+        i {
+          font-size: 18px;
+          cursor: pointer;
+          transition: all 0.15s ease;
+          color: rgb(129, 129, 129);
+
+          &:hover {
+            color: rgb(215, 215, 215);
+          }
+        }
+      }
+    }
+
+    .quick-deposit {
+      margin-left: 15px;
+      padding: 0 15px;
+
+      button {
+        border: none;
+        outline: none;
+        background: $grad;
+        color: white;
+        padding: 8px 24px;
+        border-radius: 10px;
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.15s ease;
+
+        &:hover {
+          background: $grad-hover;
+        }
+      }
+    }
+
+    .setting {
+      margin-left: 15px;
+
+      .setting-content-inside {
+        color: rgb(194, 194, 194);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: all 0.15s ease;
+
+        i,
+        span {
+          font-size: 14px;
+        }
+      }
+    }
+
+    .profile-xj {
+      margin-left: 15px;
+
+      @media screen and (max-width: 768px) {
+        margin-left: 15px;
+      }
+
+      .profile-content-inside {
+        color: rgb(194, 194, 194);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: all 0.15s ease;
+
+        i,
+        span {
+          font-size: 14px;
+        }
+      }
+    }
+
+    .notification {
+      margin-left: 15px;
+
+      @media screen and (max-width: 576px) {
+        margin-left: 10px;
+      }
+
+      .notification-content-inside {
+        color: rgb(194, 194, 194);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: all 0.15s ease;
+        position: relative;
+
+        i,
+        span {
+          font-size: 14px;
+        }
+
+        div.noti-count {
+          position: absolute;
+          top: -8px;
+          left: calc(50% + 4px);
+          background-color: $red;
+          width: fit-content;
+          min-width: 20px;
+          border-radius: 1000px;
+          padding: 0px 4px;
+
+          @media screen and (max-width: 992px) {
+            top: -15px;
+            left: unset;
+            right: -12px;
+          }
+
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          font-weight: 600;
+          font-size: 12px;
+          color: white !important;
+        }
+      }
+    }
+  }
+}
+
+h2.botrade-balance-choser-title,
+h2.quick-deposit-title,
+h2.setting-title {
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.botrade-balance-choser {
+  width: 220px !important;
+
+  .field {
+    background-color: $bg;
+    border-radius: 2px;
+    padding: 5px 10px;
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    input {
+      margin-right: 20px;
+      cursor: pointer;
+      margin-top: -30px;
+    }
+
+    label {
+      width: 100%;
+      cursor: pointer;
+
+      .div-as-label {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        font-size: 14px;
+
+        span.text {
+          font-size: 12px;
+          color: grey;
+        }
+
+        span.num {
+          font-weight: 600;
+          font-size: 18px;
+          color: white;
+        }
+      }
+    }
+  }
+
+  .ant-divider {
+    margin: 0 !important;
+  }
+
+  input[type="radio"]:after {
+    width: 18px;
+    height: 18px;
+    border-radius: 18px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #d1d3d1;
+    content: "";
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+  }
+
+  input[type="radio"]:checked:after {
+    width: 18px;
+    height: 18px;
+    border-radius: 18px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: $primary-color;
+    content: "";
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+  }
+}
+
+.setting-modal {
+  width: 350px !important;
+
+  .language-field,
+  .sound-field,
+  .eye-field {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .langlang {
+      color: white;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      i {
+        margin-right: 5px;
+      }
+    }
+  }
+
+  .sound-field,
+  .eye-field {
+    margin-top: 35px;
+  }
+
+  .ant-select-selector {
+    border: none !important;
+    background-color: rgb(37, 37, 37, 0.5) !important;
+    border-radius: 2px !important;
+  }
+}
+
+.drawer-as-sidebar {
+  .ant-drawer-content {
+    background-color: $bg;
+  }
+
+  .ant-drawer-body {
+    padding: 0;
+  }
+
+  .botrade-sidebar-in-drawer {
+    width: $sidebar-in-drawer-width;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    transition: all 0.15s ease;
+    position: relative;
+
+    .title {
+      padding: 20px 0;
+      margin-bottom: 22px;
+
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+
+      i {
+        font-size: 25px;
+        color: whitesmoke;
+        position: absolute;
+        top: 15px;
+        left: 15px;
+      }
+
+      img {
+        width: 134px;
+        height: 38px;
+        align-self: center;
+      }
+    }
+
+    .quick-deposit {
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .menu-title {
+      padding: 0 20px;
+      text-transform: uppercase;
+      font-size: 16px;
+      font-weight: 600;
+      color: whitesmoke;
+      margin-top: 15px;
+      margin-bottom: 5px;
+    }
+
+    .menu-list {
+      padding: 0 20px;
+    }
+
+    .xbotrade-btn {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 6px 20px;
+      color: white;
+      border-radius: 6px;
+      margin-bottom: 2px;
+
+      cursor: pointer;
+      transition: all 0.15s ease;
+
+      i {
+        font-size: 18px;
+        margin-right: 12px;
+      }
+
+      span {
+        font-size: 16px;
+        font-weight: 500;
+      }
+
+      &:hover {
+        background-color: $main-light-over-dark;
+      }
+    }
+
+    .xbotrade-btn.with-image {
+      position: relative;
+
+      img {
+        width: 30px;
+        height: 22px;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+
+    .xbotrade-btn-active {
+      background-color: $main-light-over-dark;
+
+      i,
+      span {
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+.notifications-drawer-wrapper {
+  .ant-drawer-wrapper-body {
+    background-color: $bg;
+
+    .ant-drawer-body {
+      padding: 18px 0 !important;
+    }
+  }
+
+  .title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 25px;
+    padding: 0 18px;
+
+    h2.title {
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 0;
+    }
+  }
+
+  .no-data {
+    margin-top: 100px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      margin-bottom: 10px;
+    }
+
+    span {
+      font-size: 15px;
+      color: whitesmoke;
+    }
+  }
+}
+
+.balance-popover {
+  padding-top: 0 !important;
+
+  .ant-popover-inner-content {
+    background: $main_dark;
+    border-radius: 2px;
+    border: 1px solid $main-light-over-dark;
+    padding: 0 !important;
+  }
+
+  .ant-popover-arrow {
+    display: none;
+  }
+}
+
+.setting-popover {
+  padding-top: 0 !important;
+
+  .ant-popover-inner-content {
+    background: $main_dark;
+    border-radius: 10px;
+    border: 1px solid $main-light-over-dark;
+    padding: 24px;
+  }
+
+  .ant-popover-arrow {
+    display: none;
+  }
+}
+
+.notification-popover {
+  padding-top: 5px !important;
+  width: 400px;
+
+  .ant-popover-inner-content {
+    background: $main_dark;
+    border-radius: 10px;
+    border: 1px solid $main-light-over-dark;
+    padding: 0px !important;
+  }
+
+  .ant-popover-arrow {
+    display: none;
+  }
+
+  .notifications-drawer-content {
+    .title-row {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 16px;
+      background-color: $main-light-over-dark;
+      border-radius: 10px;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+
+      .left {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        h2 {
+          margin: 0;
+          font-size: 17px;
+          font-weight: bold;
+        }
+
+        img {
+          cursor: pointer;
+        }
+      }
+
+      .right {
+        cursor: pointer;
+        color: grey;
+        font-size: 14px;
+      }
+    }
+
+    .body-row {
+      max-height: 450px;
+      overflow-x: hidden;
+      overflow-y: scroll;
+    }
+  }
+}
+
+.refill-demo-balance {
+  font-size: 20px;
+  cursor: pointer;
+  color: "whitesmoke";
+  margin-left: 10px;
+
+  &:hover {
+    color: $primary-color;
+  }
+}
+
+.pagination-noti-box {
+  text-align: right;
+  margin-bottom: 15px !important;
+}

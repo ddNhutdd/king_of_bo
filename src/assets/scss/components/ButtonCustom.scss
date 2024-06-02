@@ -1,0 +1,49 @@
+@mixin shineConfig ($color) {
+	background: $color;
+	border: none;
+	transition: top .2s;
+	top: 0;
+
+	&:hover {
+		box-shadow: 0 0 19px 1px $color;
+		position: relative;
+		top: -3px;
+	}
+}
+
+.buttonCustom {
+	padding: 9px 0;
+	border: 1px solid #2f3342;
+	color: #fff;
+	font-weight: 600;
+	width: 100%;
+	position: relative;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: box-shadow .2s;
+
+	&.active {
+		background: linear-gradient(180deg, #0093e9 0, #5c8d87);
+		border-color: transparent;
+
+		&.disabled {
+			opacity: 0.65;
+			cursor: not-allowed;
+			color: #212529;
+		}
+	}
+
+	&.unActive {
+		background: #2f3342;
+		border: 1px solid #2f3342;
+		color: #7c7c7c;
+	}
+
+	&.shineGreen {
+		@include shineConfig(#23c15f);
+	}
+
+	&.shineRed {
+		@include shineConfig(#fa2843);
+	}
+}

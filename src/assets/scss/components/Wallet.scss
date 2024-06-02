@@ -1,0 +1,58 @@
+.wallet {
+  .title {
+    font-size: 20px;
+    font-weight: 600;
+    color: $primary-color;
+    margin-bottom: 25px;
+  }
+
+  .deposit-type {
+    button + button {
+      margin-left: 5px;
+    }
+  }
+
+  .deposit-content {
+    margin: 60px 0;
+    text-align: center;
+
+    .address {
+      margin: 25px auto;
+      font-weight: 500;
+      max-width: 200px;
+      word-wrap: break-word;
+      text-align: center;
+    }
+
+    .fa-circle-check {
+      font-size: 20px;
+    }
+  }
+
+  .deposit-description {
+    dl {
+      padding: 0 30px;
+
+      div {
+        display: flex;
+        margin-bottom: 15px;
+
+        dt {
+          width: 40px;
+          min-width: 40px;
+
+          i {
+            font-size: 22px;
+            color: $primary-color;
+            opacity: 0.5;
+            margin-top: 3px;
+          }
+        }
+
+        dd {
+          color: grey;
+        }
+      }
+    }
+  }
+}

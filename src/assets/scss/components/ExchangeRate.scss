@@ -1,0 +1,40 @@
+@import "../base/base.scss";
+
+.exchange-rate-component {
+  background: inherit;
+  color: inherit;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 5px;
+  padding: 30px;
+
+  @media screen and (max-width: 576px) {
+    padding: 20px;
+  }
+
+  .title-area {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .title {
+    font-size: 20px;
+    font-weight: 500;
+    color: $primary-color;
+    margin-bottom: 25px;
+  }
+
+  .exchange-rate-field {
+    @media screen and (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    button {
+      @media screen and (max-width: 768px) {
+        margin-left: 0 !important;
+        margin-top: 20px;
+      }
+    }
+  }
+}

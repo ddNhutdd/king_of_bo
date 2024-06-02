@@ -1,0 +1,24 @@
+.input-width-image {
+	width: 100%;
+	padding: 5px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	border: 1px solid #142545;
+	border-radius: 5px;
+	min-height: 40px;
+
+	img {
+		width: 20px;
+		height: 20px;
+		display: block;
+		object-fit: cover;
+		margin-right: 10px;
+		margin-left: 10px;
+	}
+
+	.content {
+		padding: 0;
+	}
+}

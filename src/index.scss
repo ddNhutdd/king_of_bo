@@ -1,0 +1,271 @@
+@import "./assets/scss/base/base.scss";
+@import "./assets/scss/base/config.scss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Public Sans", sans-serif;
+  // font-family không để trong * vì sẽ ghi đè font mặc định của highchart, nên để trong body
+  // để trong index để không bị ghi đè bởi font mặc định của antd
+}
+
+#root {
+  @media screen and (max-width: 320px) {
+    display: none !important;
+  }
+}
+
+// Dark Scrollbar
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgb(17, 17, 17);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(35, 35, 35);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: grey;
+}
+
+// Sweet Alert
+
+.btn-swal-antd {
+  border: none;
+  outline: none;
+  border-radius: 5px;
+
+  padding: 6px 25px;
+
+  background-color: $primary-color;
+  color: white;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.05);
+
+  cursor: pointer;
+  transition: all 0.25s ease;
+
+  &:hover {
+    background-color: $primary-color-light;
+  }
+}
+
+.content-swal-antd {
+  color: black;
+  font-size: 1rem;
+}
+
+.title-swal-antd {
+  font-size: 1.5rem;
+}
+
+.no-border {
+  border: 0 !important;
+}
+
+// Toast
+
+.swal2-popup.swal2-toast {
+  padding: 10px 15px;
+
+  .swal2-title {
+    font-size: 14px;
+    margin: 7px;
+    font-weight: 500;
+  }
+
+  .no-border {
+    border: 0 !important;
+  }
+}
+
+// Loading spin
+
+.loading-spin {
+  width: 100%;
+  height: calc(100vh - 120px);
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+// Progress
+
+.ant-progress-text {
+  display: none !important;
+}
+
+.ant-progress-outer {
+  padding: 0 !important;
+}
+
+.ant-progress-success-bg {
+  background-color: $green;
+}
+
+.ant-progress-bg {
+  background-color: $red;
+}
+
+// Chart
+
+.plotlineChart {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.plotlineChart span.price,
+.plotlineChart span.time {
+  display: block;
+  padding: 3px 4px 1px 4px; // padding trên lớn hơn để tạo cảm giác cân bằng với padding dưới
+  background-color: $primary-color;
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+
+  @media screen and (max-width: 576px) {
+    letter-spacing: -1px;
+    font-size: 11px;
+  }
+}
+
+.plotlineChart span.time {
+  margin-top: 2px;
+  text-align: right;
+}
+
+// Button
+
+.ant-btn-primary {
+  background: $grad !important;
+  color: white !important;
+  font-weight: bold !important;
+
+  &:hover {
+    background: $grad-hover !important;
+  }
+}
+
+.ant-btn-primary.ant-btn-dangerous {
+  background: $red !important;
+  color: white !important;
+  font-weight: bold !important;
+
+  &:hover {
+    background: red !important;
+  }
+}
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+.ant-modal-body {
+  background-color: $main_dark;
+  border-radius: 5px;
+  padding: 15px 20px 20px 20px;
+}
+
+.ant-modal-header,
+.ant-modal-footer {
+  background-color: $main_dark;
+}
+
+.ant-radio-button-wrapper-checked {
+  span {
+    color: black;
+    font-weight: bold;
+  }
+}
+
+body {
+  background-color: $bg !important;
+}
+
+// Remove autofill background
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  transition: background-color 9999s ease-in-out 0s;
+  -webkit-text-fill-color: white;
+  // cái này không làm mất hoàn toàn được, chỉ áp dụng trick để ẩn tạm thời
+}
+
+// Local font
+
+@font-face {
+  font-family: "Frizon";
+  src: local("Frizon"), url(./assets/font/Frizon.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "LucidaGrande";
+  src: local("LucidaGrande"), url(./assets/font/LucidaGrande.ttf) format("truetype");
+}
+
+// Toastify
+
+.Toastify__toast-theme--colored.Toastify__toast--success {
+  background: $green !important;
+  font-size: 17px !important;
+  font-weight: 600 !important;
+  color: white !important;
+  font-family: "Public Sans", sans-serif;
+}
+
+.Toastify__toast-theme--colored.Toastify__toast--error {
+  background: $red !important;
+  font-size: 17px !important;
+  font-weight: 600 !important;
+  color: white !important;
+  font-family: "Public Sans", sans-serif;
+}
+
+// Modal quản lý KYC users, bỏ bớt 1 cái border nhìn cho đỡ rối
+
+.feb2023-modal-kyc-user-no-line {
+  .ant-modal-footer {
+    border-top: unset !important;
+  }
+}
+
+// Highchart navigator: vẫn enabled nó để chart hoạt động nhưng giảm height giảm margin và ẩn khỏi giao diện
+
+.highcharts-navigator,
+.highcharts-navigator-xaxis {
+  visibility: hidden;
+}
+
+// Highchart: dash style cho trục y
+
+.highcharts-yaxis .highcharts-axis-line {
+  stroke-dasharray: 6 2.25;
+}

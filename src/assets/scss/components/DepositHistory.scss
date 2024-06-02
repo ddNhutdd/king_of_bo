@@ -1,0 +1,152 @@
+.deposit-history {
+  .title-area {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    @media screen and (max-width: 992px) {
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    .title {
+      font-size: 20px;
+      font-weight: 600;
+      color: $primary-color;
+      margin-bottom: 25px;
+    }
+  }
+
+  .pagination-box {
+    @media screen and (max-width: 992px) {
+      width: 100%;
+      margin-bottom: 25px;
+      text-align: right;
+    }
+  }
+
+  .table-row {
+    background: $bg;
+  }
+  .ant-table-thead > tr > th {
+    background: $main-dark !important;
+  }
+}
+
+dl.deposit-history-modal {
+  margin-bottom: 0;
+
+  div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 5px;
+
+    // &:hover {
+    //   background-color: whitesmoke;
+    // }
+  }
+
+  dt {
+    font-weight: normal;
+    color: inherit;
+  }
+
+  dd {
+    margin-bottom: 0;
+    text-align: right;
+    max-width: 300px;
+    font-weight: 500;
+    color: inherit;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    .fa-circle {
+      font-size: 8px;
+      color: rgb(0, 201, 0);
+      margin-right: 5px;
+    }
+
+    img.coin-type {
+      width: 25px;
+      height: 25px;
+      margin-right: 5px;
+    }
+
+    i.fa-link,
+    i.fa-clone {
+      color: grey;
+      margin-left: 10px;
+      cursor: pointer;
+      transition: all 0.25s ease;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+dl.deposit-history-modal-mobile {
+  margin-bottom: 0;
+
+  div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+  }
+
+  dt {
+    font-weight: normal;
+    color: inherit;
+  }
+
+  dd {
+    margin-bottom: 0;
+    text-align: right;
+    max-width: 300px;
+    font-weight: 500;
+    color: inherit;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    .fa-circle {
+      font-size: 8px;
+      color: rgb(0, 201, 0);
+      margin-right: 5px;
+    }
+
+    img.coin-type {
+      width: 25px;
+      height: 25px;
+      margin-right: 5px;
+    }
+
+    i.fa-link,
+    i.fa-clone {
+      color: grey;
+      margin-left: 10px;
+      cursor: pointer;
+      transition: all 0.25s ease;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+
+  dd.dd_address,
+  dd.dd_txid {
+    span {
+      display: inline-block;
+      max-width: 200px;
+      word-wrap: break-word;
+    }
+  }
+}

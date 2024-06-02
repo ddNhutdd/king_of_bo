@@ -1,0 +1,48 @@
+@import "../base/base.scss";
+
+.trade-admin {
+  visibility: visible;
+}
+
+.trade-admin {
+  .selection-admin {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .btc-usdt {
+      display: flex;
+      align-items: center;
+      background-color: $main-light-over-dark;
+      width: fit-content;
+      padding: 5px 10px;
+      border-radius: 6px;
+      cursor: pointer;
+
+      img {
+        width: 18px;
+        height: 18px;
+        margin-right: 5px;
+      }
+
+      span {
+        font-size: 13px;
+        color: whitesmoke;
+      }
+    }
+
+    .user-online {
+      b {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.trade-mobile {
+  margin: -5px;
+}
+.trade-desktop {
+  margin: -20px;
+}

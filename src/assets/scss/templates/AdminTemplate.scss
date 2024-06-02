@@ -1,0 +1,53 @@
+.admin-template {
+  position: relative;
+
+  .component {
+    position: absolute;
+    top: 60px;
+    left: 250px;
+    z-index: 0;
+    width: calc(100% - 250px);
+    padding: 30px;
+    transition: all 0.25s ease;
+
+    @media screen and (max-width: 576px) {
+      padding: 10px;
+    }
+  }
+
+  .component-expand {
+    width: 100%;
+    left: 0;
+  }
+
+  .component-fullwidth-mobile {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    padding: 10px;
+    transition: all 0.25s ease;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.1);
+    transition: all 0.25s ease;
+  }
+}
+
+.admin-template.dark {
+  background-color: $dark-bg !important;
+  color: $dark-text !important;
+}
+
+.admin-template.light {
+  background-color: $light-bg !important;
+  color: $light-text !important;
+}

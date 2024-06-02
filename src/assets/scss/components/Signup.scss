@@ -1,0 +1,75 @@
+@import "../base/base.scss";
+$main-width: 320px;
+
+.main-signup {
+  padding: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  .center-area {
+    width: $main-width;
+
+    animation: fadeInRight;
+    animation-duration: 0.5s;
+
+    .title {
+      font-size: 24px;
+      font-weight: bold;
+      color: $primary-color;
+      margin-bottom: 8px;
+    }
+
+    form {
+      label {
+        display: block;
+        margin-bottom: 2px;
+      }
+
+      .field {
+        margin-bottom: 14px;
+      }
+
+      .new-field-pw {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+
+      .code-field {
+        margin-bottom: 40px;
+      }
+
+      i.toggle-code {
+        margin-left: 8px;
+        color: grey;
+        cursor: pointer;
+      }
+
+      .error {
+        font-weight: 500;
+        color: red;
+      }
+
+      .forgot {
+        text-align: right;
+        font-size: 13px;
+        font-weight: 500;
+        cursor: pointer;
+        margin-bottom: 40px;
+      }
+    }
+
+    .link-to-signup,
+    .link-to-login {
+      margin-bottom: 30px;
+
+      span {
+        font-weight: 600;
+        color: $primary-color;
+        cursor: pointer;
+      }
+    }
+  }
+}

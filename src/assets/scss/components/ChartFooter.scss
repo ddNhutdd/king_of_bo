@@ -1,0 +1,269 @@
+.chart-footer {
+  .tile-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .tile-zone {
+      width: fit-content;
+      display: grid;
+      grid-template-rows: repeat(4, 1fr);
+      grid-auto-flow: column;
+      gap: 4px;
+      margin-top: 28px;
+
+      @media screen and (max-width: 1376px) {
+        gap: 2px;
+      }
+
+      .tile-item {
+        width: 23px;
+        height: 23px;
+        background-color: $main-light-over-dark;
+        border-radius: 50%;
+
+        @media screen and (max-width: 1376px) {
+          width: 18px;
+          height: 18px;
+        }
+      }
+
+      .tile-item.red {
+        background-color: $red;
+      }
+      .tile-item.green {
+        background-color: $green;
+      }
+      .tile-item.white {
+        background-color: white;
+      }
+      .tile-item.space {
+        margin-left: 50px;
+      }
+    }
+  }
+}
+
+.chart-footer-mobile {
+  .tile-area-mobile {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .tile-zone-mobile {
+      width: fit-content;
+      display: grid;
+      grid-template-rows: repeat(4, 1fr);
+      grid-auto-flow: column;
+      gap: 2px;
+
+      .tile-item-mobile {
+        width: 16px;
+        height: 16px;
+        background-color: $main-light-over-dark;
+        border-radius: 50%;
+
+        @media screen and (max-width: 400px) {
+          width: 15px;
+          height: 15px;
+        }
+      }
+
+      .tile-item-mobile.red {
+        background-color: $red;
+      }
+      .tile-item-mobile.green {
+        background-color: $green;
+      }
+      .tile-item-mobile.white {
+        background-color: white;
+      }
+      .tile-item-mobile.space {
+        margin-left: 50px;
+
+        @media screen and (max-width: 400px) {
+          margin-left: 30px;
+        }
+      }
+    }
+  }
+}
+
+.chart-footer-admin {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  font-size: 15px;
+
+  @media screen and (max-width: 1200px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .box {
+    padding: 5px 10px;
+    background-color: $bg;
+    border-radius: 10px;
+
+    div.sta {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      font-size: 16px;
+
+      span:last-child {
+        font-size: 20px;
+        font-weight: bold;
+        margin-left: 5px;
+      }
+    }
+
+    .buy-title,
+    .sell-title {
+      font-weight: 600;
+    }
+
+    .stb {
+      margin-top: 15px;
+
+      .item-box {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        color: whitesmoke !important;
+        font-size: 16px !important;
+        font-weight: 600 !important;
+        margin-bottom: 4px;
+      }
+    }
+  }
+
+  .box-buy {
+    border: 1px solid $green;
+
+    div.sta {
+      color: $green;
+    }
+  }
+
+  .box-sell {
+    border: 1px solid $red;
+
+    div.sta {
+      color: $red;
+    }
+  }
+}
+
+.cf-tabss {
+  .ant-tabs-tab {
+    font-weight: 600;
+    padding: 2px;
+  }
+
+  .ant-tabs-nav {
+    margin-bottom: 5px !important;
+
+    &::before {
+      display: none;
+    }
+
+    .ant-tabs-tab .ant-tabs-tab-btn {
+      font-size: 16px;
+      font-weight: normal;
+      color: rgb(146, 146, 146);
+      padding: 0 16px;
+      margin-bottom: -4px;
+    }
+    .ant-tabs-tab-active .ant-tabs-tab-btn {
+      font-size: 16px;
+      font-weight: 600;
+      color: white;
+      padding: 0 16px;
+      margin-bottom: -4px;
+    }
+
+    .ant-tabs-ink-bar {
+      height: 4px !important;
+      border-radius: 5px;
+    }
+  }
+
+  .ant-tabs-extra-content {
+    .counter {
+      margin-bottom: 10px;
+      align-self: flex-end;
+
+      display: flex;
+      align-items: center;
+
+      .count-buy,
+      .count-sell {
+        background-color: $main-light-over-dark;
+        padding: 1px 10px;
+        border-radius: 4px;
+        cursor: pointer;
+
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        @media screen and (max-width: 992px) {
+          padding: 2px 8px;
+        }
+
+        span {
+          font-size: 18px;
+          font-weight: bold;
+          color: white;
+
+          @media screen and (max-width: 992px) {
+            font-size: 16px;
+          }
+        }
+      }
+
+      .count-sell {
+        margin-left: 8px;
+
+        i {
+          color: $red;
+        }
+      }
+    }
+  }
+}
+
+.counter-mobile-tabBarExtraContent {
+  display: flex;
+  align-items: center;
+  margin-right: 5px;
+
+  .count-buy,
+  .count-sell {
+    background-color: $main-light-over-dark;
+    padding: 1px 4px;
+    border-radius: 3px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+
+    span {
+      font-size: 16px;
+      font-weight: bold;
+      color: white;
+    }
+  }
+
+  .count-sell {
+    margin-left: 8px;
+  }
+}

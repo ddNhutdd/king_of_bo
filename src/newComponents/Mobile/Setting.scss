@@ -1,0 +1,30 @@
+.setting-mobile {
+  .setting-m-title {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 25px;
+  }
+
+  .language-field,
+  .sound-field {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .langlang {
+      color: white;
+      font-size: 16px;
+
+      i {
+        margin-right: 5px;
+      }
+    }
+  }
+
+  .sound-field {
+    margin-top: 20px;
+  }
+}

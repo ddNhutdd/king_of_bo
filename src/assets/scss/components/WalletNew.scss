@@ -1,0 +1,105 @@
+@mixin container {
+	padding-right: 16px;
+	padding-left: 16px;
+	max-width: 1140px;
+	margin: auto;
+	width: 100%;
+
+	@media screen and (max-width: 1140px) {
+		max-width: 960px;
+	}
+}
+
+.wallet-new {
+	margin: -30px;
+
+	@media screen and (max-width: 992px) {
+		margin: -10px;
+	}
+
+	.panel {
+		height: 160px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: linear-gradient(180deg, #0093e9 0, #5c8d87);
+
+		.panel-content {
+			@include container;
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-start;
+
+			.left {
+				div {
+					&:nth-of-type(1) {
+						color: #ffffff99;
+						font-size: 18px;
+						margin-bottom: 8px;
+					}
+
+					&:nth-of-type(2) {
+						height: 30px;
+						line-height: 30px;
+						font-size: 44px;
+						color: #fff;
+						font-weight: 600;
+					}
+				}
+			}
+
+			.right {
+				color: #fff;
+				display: flex;
+				gap: 5px;
+				align-items: center;
+				cursor: pointer;
+				user-select: none;
+			}
+		}
+	}
+
+	.tab-header {
+		background: #1f2f43;
+		margin-bottom: 64px;
+
+		.tab-header-content {
+			@include container;
+			display: flex;
+			justify-content: flex-start;
+
+			.tab-item {
+				padding: 8px 16px;
+				height: 55px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				color: #ffffff4d;
+				font-size: 16px;
+				position: relative;
+				cursor: pointer;
+
+				&.active {
+					color: #0897e7;
+					font-weight: 700;
+
+					&::after {
+						content: "";
+						display: block;
+						width: 100%;
+						height: 4px;
+						background: #0897e7;
+						border-radius: 4px 4px 0 0;
+						position: absolute;
+						bottom: 0;
+						left: 0;
+					}
+				}
+			}
+		}
+	}
+
+	.tab-content {
+		@include container;
+	}
+}

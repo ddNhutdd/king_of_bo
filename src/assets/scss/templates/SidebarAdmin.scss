@@ -1,0 +1,126 @@
+@import "../base/base.scss";
+
+.sidebar-admin {
+  width: 250px;
+  height: calc(100vh - 60px);
+  padding: 0 10px 10px 10px;
+  background-color: $bg;
+  position: fixed;
+  top: 60px;
+  left: 0;
+  z-index: 8;
+  transition: all 0.25s ease;
+  overflow-y: scroll;
+
+  //   .info-area-admin {
+  //     background: rgb(237, 237, 237);
+  //     border-radius: 5px;
+  //     padding: 12px;
+  //     margin-bottom: 24px;
+
+  //     p {
+  //       margin-bottom: 0;
+  //       font-weight: bold;
+  //       color: $t;
+  //     }
+
+  //     span {
+  //       display: block;
+  //       color: $t;
+  //     }
+  //   }
+
+  .btn {
+    display: block;
+    padding: 10px;
+    margin-bottom: 2px;
+    border-radius: 4px;
+    background-color: $bg;
+    color: whitesmoke;
+    cursor: pointer;
+    transition: all 0.15s ease;
+
+    user-select: none;
+
+    &:hover {
+      background-color: $main-light-over-dark;
+    }
+
+    &:hover span {
+      font-weight: 600;
+    }
+
+    i.fa-solid,
+    i.fa-brands {
+      width: 25px;
+    }
+  }
+
+  .btn-active {
+    color: black;
+    background: $primary-color;
+    font-weight: 600;
+
+    &:hover {
+      color: black;
+      background: $primary-color;
+      font-weight: 600;
+    }
+
+    &:hover span {
+      font-weight: 600;
+    }
+  }
+}
+
+.sidebar-hide {
+  transform: translateX(-250px);
+}
+
+.btn-special {
+  position: relative;
+}
+
+.menuArrow {
+  width: fit-content !important;
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  transform-origin: 50% 50%;
+  transition: all 0.25s ease;
+}
+
+.rotate {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.btn-child {
+  padding: 10px 30px !important;
+}
+
+.collapse-menu {
+  height: 132px; // (42 chiều cao + 2 margin) * số menu
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.25s ease;
+}
+
+.collapse-menu.hide {
+  height: 0px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.collapse-menu-2 {
+  height: 132px; // (42 chiều cao + 2 margin) * số menu
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.25s ease;
+}
+
+.collapse-menu-2.hide {
+  height: 0px;
+  opacity: 0;
+  visibility: hidden;
+}

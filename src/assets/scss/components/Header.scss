@@ -1,0 +1,49 @@
+@import "../base/base.scss";
+
+$navbar-height: 64px;
+
+header.header {
+  padding: 0 16px;
+  width: 100%;
+  height: $navbar-height;
+
+  .content {
+    width: 100%;
+    height: $navbar-height;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+      img {
+        display: none;
+        width: 72px;
+        height: 40px;
+      }
+    }
+
+    .right-area {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+
+      .theme-zone {
+        margin-right: 10px;
+      }
+
+      i.fa-house {
+        color: whitesmoke;
+        font-size: 16px;
+        margin-left: 20px;
+        cursor: pointer;
+        transition: all 0.15s ease;
+
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}

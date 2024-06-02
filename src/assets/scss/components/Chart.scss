@@ -1,0 +1,286 @@
+.chart {
+  width: 100%;
+
+  .selection {
+    .btc-usdt {
+      display: flex;
+      align-items: center;
+      background-color: $main-light-over-dark;
+      width: fit-content;
+      padding: 5px 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      visibility: hidden;
+      // cái này chỉ ở đây để giữ giao diện không bị bể
+
+      img {
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+      }
+
+      span {
+        font-size: 14px;
+        color: whitesmoke;
+        font-weight: 600;
+      }
+    }
+
+    .btc-usdt-new {
+      display: flex;
+      align-items: center;
+      background-color: $main-light-over-dark;
+      width: fit-content;
+      padding: 6px 15px;
+      border-radius: 6px;
+      cursor: pointer;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      // cái này mới thực sự hiển thị, absolute để chỉnh nó lớn lên mà không ảnh hưởng tới luồng giao diện chính
+
+      img {
+        width: 20px;
+        height: 20px;
+        margin-right: 6px;
+      }
+
+      span {
+        font-size: 14px;
+        color: whitesmoke;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .chart-area {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+
+    width: 100%;
+    height: calc(100vh - 120px);
+
+    .fixed-left-zone {
+      width: calc(100% - 220px);
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      #chart,
+      #highchart_container {
+        width: 100%;
+        height: calc(100% - 225px);
+
+        @media screen and (max-width: 1376px) {
+          height: calc(100% - 185px);
+        }
+
+        background-image: url(../../img/svg/world_map.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+      }
+    }
+
+    .newSidePane-sp.hide {
+      display: none;
+    }
+  }
+
+  .chart-area.withSidePane {
+    .fixed-left-zone {
+      width: calc(100% - 440px);
+    }
+
+    .newSidePane-sp {
+      width: 210px;
+      margin-top: -30px;
+      animation: slideInRight;
+      animation-duration: 0.25s;
+      display: block;
+    }
+  }
+
+  .chart-area,
+  .chart-area.withSidePane {
+    .cf-tabss {
+      .ant-tabs-content-holder {
+        overflow: hidden;
+        height: 200px !important;
+        min-height: 200px !important;
+        max-height: 200px !important;
+
+        .ant-tabs-content {
+          height: 100%;
+        }
+      }
+    }
+
+    .newSidePane-sp .ant-tabs-nav-wrap {
+      .ant-tabs-nav-list {
+        width: 100%;
+
+        .ant-tabs-tab {
+          width: 50%;
+          justify-content: center;
+          font-size: 15px;
+          font-weight: 500;
+        }
+
+        .ant-tabs-tab + .ant-tabs-tab {
+          margin-left: 0 !important;
+        }
+      }
+
+      .ant-tabs-ink-bar {
+        height: 3px;
+      }
+
+      .ant-tabs-tab-btn {
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+  .chart-area-admin {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+
+    width: 100%;
+    background: inherit;
+    color: inherit;
+
+    @media screen and (max-width: 1200px) {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .chart-footer-admin {
+      grid-column: 2 / span 5;
+    }
+  }
+}
+
+.chart-vh-full-mobile {
+  @media screen and (max-width: 320px) {
+    display: none;
+  }
+
+  .selection-mobile {
+    .btc-usdt {
+      display: flex;
+      align-items: center;
+      background-color: $main-light-over-dark;
+      width: fit-content;
+      padding: 2px 8px;
+      border-radius: 2px;
+      visibility: hidden;
+
+      img {
+        width: 16px;
+        height: 16px;
+        margin-right: 5px;
+      }
+
+      span {
+        font-size: 12px;
+        color: whitesmoke;
+      }
+    }
+
+    .btc-usdt-new {
+      display: flex;
+      align-items: center;
+      background-color: $main-light-over-dark;
+      width: fit-content;
+      padding: 5px 10px;
+      border-radius: 3px;
+      position: absolute;
+      top: 5px;
+      left: 5px;
+
+      img {
+        width: 22px;
+        height: 22px;
+        margin-right: 6px;
+      }
+
+      span {
+        font-size: 15px;
+        color: whitesmoke;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .chart-area-mobile {
+    width: 100%;
+
+    // *******
+    height: calc(100vh - 100px); // fallback height
+    height: calc(var(--vh, 1vh) * 100 - 100px);
+    height: calc(var(--vh100, 100vh) - 100px);
+    // update 14/3/2024: use 100svh instead of 100vh to fix the issue of mobile browser's address bar
+    // https://stackoverflow.com/questions/37112218/css3-100vh-not-constant-in-mobile-browser/72245072#72245072
+    height: calc(100svh - 102px);
+    // *******
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    #chart,
+    #highchart_container {
+      width: 100%;
+      height: calc(100% - 255px);
+      // 255 là tổng height của cái đống bên dưới + 0 gap
+
+      background-image: url(../../img/logo/logo.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+    }
+
+    .ant-tabs {
+      .ant-tabs-nav {
+        .ant-tabs-tab-btn {
+          padding: 0 !important;
+          margin-bottom: 2px;
+        }
+
+        .ant-tabs-tab + .ant-tabs-tab {
+          margin-left: 15px !important;
+        }
+      }
+
+      .ant-tabs-content-holder {
+        height: 123px !important;
+        min-height: 123px !important;
+        max-height: 123px !important;
+      }
+    }
+  }
+}
+
+.wrapper-loader-pola {
+  width: calc(100vw - 165px);
+  height: calc(100vh - 125px);
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper-loader-pola-mobile {
+  width: calc(100vw - 20px);
+  height: calc(100vh - 85px);
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}

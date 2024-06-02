@@ -1,0 +1,121 @@
+@import "../base/base.scss";
+
+.navbar {
+  width: 100%;
+  height: 60px;
+  background: $light-bg;
+
+  padding: 0 30px 0 20px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+
+  @media screen and (max-width: 576px) {
+    padding: 0 20px;
+  }
+
+  .logo {
+    height: 100%;
+    color: $t;
+    display: flex;
+    align-items: center;
+
+    i {
+      font-size: 20px;
+      cursor: pointer;
+      transition: all 0.25s ease;
+
+      &:hover {
+        animation: heartBeat;
+        animation-duration: 2s;
+      }
+    }
+
+    img {
+      height: 40px;
+      width: 92px;
+
+      margin-left: 20px;
+    }
+  }
+
+  .right-nav-zone {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+
+    .settings {
+      margin-right: 30px;
+      color: $t;
+
+      @media screen and (max-width: 576px) {
+        margin-right: 15px;
+      }
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      cursor: pointer;
+
+      i {
+        margin-bottom: 2px;
+      }
+    }
+
+    .balance-navbar {
+      color: $t;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      cursor: pointer;
+
+      span.amount {
+        font-weight: 600;
+        font-size: 15px;
+        margin-left: 2px;
+      }
+    }
+  }
+}
+
+.navbar.dark {
+  background: $dark-bg;
+
+  .balance-navbar {
+    color: $dark-text;
+  }
+
+  .settings {
+    color: $dark-text;
+  }
+
+  .logo {
+    color: $dark-text;
+  }
+}
+
+.setting-form {
+  .field + .field {
+    margin-top: 24px;
+  }
+
+  .field {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

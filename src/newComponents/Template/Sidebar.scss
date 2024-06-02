@@ -1,0 +1,77 @@
+@import "../../assets/scss/base/base.scss";
+
+.botrade-sidebar {
+  width: $sidebar-width;
+  height: calc(100vh - #{$navbar-height});
+
+  position: fixed;
+  top: $navbar-height;
+  left: 0;
+  z-index: 9;
+
+  // background-color: $main-dark;
+  background-color: #02142b;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  transition: all 0.15s ease;
+
+  @media screen and (max-width: 992px) {
+    display: none;
+  }
+
+  .botrade-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 10px;
+    color: white;
+    position: relative;
+
+    cursor: pointer;
+    transition: all 0.15s ease;
+
+    i {
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    span {
+      font-size: 14px;
+      font-weight: 600;
+      text-align: center;
+      color: #8b8d96;
+    }
+
+    &.logout-btn {
+      &::after {
+        content: "";
+        width: 70%;
+        top: 0;
+        left: 50%;
+        text-align: center;
+        position: absolute;
+        height: 1px;
+        background-color: #8b8d96;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+      }
+    }
+
+    // &:hover {
+    //   background-color: $main-light-over-dark;
+    // }
+  }
+
+  .botrade-btn-active {
+    // background-color: $main-light-over-dark;
+
+    i,
+    span {
+      color: $primary-color;
+    }
+  }
+}

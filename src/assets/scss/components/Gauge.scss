@@ -1,0 +1,152 @@
+.chart-gauge {
+  width: 100%;
+  height: 100%;
+  margin-inline: auto;
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 75px;
+
+  @media screen and (max-width: 992px) {
+    max-height: 94px;
+    min-height: 94px;
+    height: 94px;
+    justify-content: center !important;
+    gap: 25px;
+    align-items: flex-start;
+    overflow: hidden !important;
+  }
+
+  @media screen and (max-width: 400px) {
+    gap: 2px;
+  }
+
+  .gauge-wrapper-div {
+    height: 100%;
+
+    .gauge-title {
+      color: whitesmoke;
+      font-size: 14px;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 12px;
+
+      span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        transform: translateX(8px);
+
+        img {
+          width: 15px;
+        }
+      }
+
+      &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+
+      @media screen and (max-width: 1376px) {
+        margin-bottom: 0px;
+      }
+      @media screen and (max-width: 992px) {
+        font-size: 10px;
+        font-weight: bold;
+        margin-bottom: -15px;
+        transform: translateY(3px);
+      }
+    }
+
+    .gauge-title.smaller {
+      @media screen and (max-width: 992px) {
+        transform: translateY(10px);
+      }
+    }
+
+    .gauge-main {
+      position: relative;
+
+      .statuss {
+        position: absolute;
+        bottom: -25px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @media screen and (max-width: 992px) {
+          bottom: 24px;
+          min-width: 100%;
+        }
+
+        .statusText {
+          font-weight: 600;
+          font-size: 13px;
+          color: white;
+          text-align: center;
+          margin-bottom: 5px;
+
+          @media screen and (max-width: 992px) {
+            font-size: 10px;
+            font-weight: bold;
+            margin-bottom: 0;
+            min-width: 100%;
+          }
+        }
+
+        .statusList {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          margin-top: -2px;
+
+          .item + .item {
+            margin-left: 20px;
+          }
+
+          .item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            b,
+            p {
+              line-height: 1;
+              font-size: 13px;
+            }
+
+            p {
+              color: grey;
+            }
+          }
+
+          .item.sell {
+            color: $red;
+          }
+          .item.neutral {
+            color: whitesmoke;
+          }
+          .item.buy {
+            color: $green;
+          }
+        }
+      }
+    }
+  }
+}
+
+.chart-gauge.isShowSidePane {
+  justify-content: space-between !important;
+
+  @media screen and (max-width: 992px) {
+    justify-content: center !important;
+  }
+}

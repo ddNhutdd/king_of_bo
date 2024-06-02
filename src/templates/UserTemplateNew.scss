@@ -1,0 +1,22 @@
+.botrade-user-template {
+  position: relative;
+  background-color: $bg;
+
+  .botrade-component {
+    background-color: $bg;
+    position: absolute;
+    z-index: 0;
+
+    top: $navbar-height;
+    left: $sidebar-width;
+
+    width: calc(100% - #{$sidebar-width});
+    padding: 30px;
+
+    @media screen and (max-width: 992px) {
+      left: 0;
+      width: 100%;
+      padding: 10px;
+    }
+  }
+}

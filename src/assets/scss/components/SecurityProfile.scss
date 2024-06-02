@@ -1,0 +1,52 @@
+@import "../base/base.scss";
+
+.security-profile {
+  width: 60%;
+  margin-inline: auto;
+  border: 2px solid $main-light-over-dark;
+  padding: 15px 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 30px;
+
+  @media screen and (max-width: 1500px) {
+    width: 75%;
+  }
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+
+  .title {
+    font-size: 20px;
+    font-weight: 600;
+    color: $primary-color;
+    margin-bottom: 25px;
+  }
+
+  .security-zone-password,
+  .security-zone-twofa {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.newModalChangePassword {
+  label {
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .field + .field {
+    margin-top: 20px;
+  }
+}
+
+.otpCodeInput {
+  text-align: center;
+  letter-spacing: 2px;
+  font-weight: 600;
+  font-size: 18px !important;
+}

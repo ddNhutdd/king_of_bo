@@ -1,0 +1,119 @@
+@import "../base/base.scss";
+
+.admin,
+.static {
+  background: inherit;
+  color: inherit;
+
+  .title {
+    font-size: 20px;
+    font-weight: 500;
+    color: $primary-color;
+    margin-bottom: 25px;
+  }
+
+  .tree {
+    position: relative;
+    line-height: 2;
+    color: inherit;
+
+    @media screen and (max-width: 576px) {
+      max-width: calc(100vw - 60px);
+      overflow-x: scroll;
+    }
+
+    span.item-name {
+      color: whitesmoke;
+      font-size: 15px;
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+        color: $primary-color;
+      }
+    }
+    span.item-mail {
+      color: grey;
+      font-size: 14px;
+      display: inline-block;
+      margin-left: 10px;
+    }
+
+    .fa-user,
+    .fa-users,
+    .fa-house-user {
+      font-size: 14px;
+      color: $primary-color;
+      margin-right: 8px;
+    }
+
+    ul {
+      padding-left: 15px;
+      list-style: none;
+
+      li {
+        position: relative;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 15px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+
+        &:before {
+          position: absolute;
+          top: 15px;
+          left: 0;
+          width: 10px;
+          height: 1px;
+          margin: auto;
+          content: "";
+          background-color: #666;
+        }
+
+        &:after {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          width: 1px;
+          height: 100%;
+          content: "";
+          background-color: #666;
+        }
+
+        &:last-child:after {
+          height: 15px;
+        }
+      }
+    }
+  }
+}
+
+.admin-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 30px;
+}
+
+p.admin-tree-network-username {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 14px;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.fullpage-loading {
+  position: fixed;
+  inset: 0 0 0 0;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}

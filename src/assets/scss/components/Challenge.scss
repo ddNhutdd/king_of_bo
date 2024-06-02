@@ -1,0 +1,656 @@
+@import "../base/base.scss";
+
+.streak-challenge-page {
+  margin: -30px;
+  position: relative;
+  background-color: #090b0d;
+
+  @media screen and (max-width: 768px) {
+    margin: -10px;
+  }
+  @media screen and (max-width: 320px) {
+    display: none;
+  }
+
+  .c-container {
+    width: 100%;
+    max-width: 1400px;
+    margin-inline: auto;
+    padding: 0 15px;
+  }
+
+  .phihanhgia {
+    animation: bounceInLeft;
+    animation-duration: 1.5s;
+
+    position: absolute;
+    top: 240px;
+    left: -62px;
+    z-index: 10;
+
+    width: 374px;
+    height: 356px;
+
+    @media screen and (max-width: 1200px) {
+      width: 274px;
+      height: 256px;
+      top: 340px;
+    }
+    @media screen and (max-width: 576px) {
+      width: 174px;
+      height: 156px;
+      top: 440px;
+      left: -32px;
+    }
+    @media screen and (max-width: 450px) {
+      display: none;
+    }
+
+    img {
+      animation: pulse;
+      animation-duration: 1s;
+      animation-delay: 1.5s;
+      animation-iteration-count: infinite;
+
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .top {
+    background: url(../../img/prize/earth.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+
+    position: relative;
+
+    padding-top: 95px;
+
+    .challenge-title {
+      animation: bounceInDown;
+      animation-duration: 1s;
+
+      font-family: "Frizon", sans-serif;
+      font-size: 50px;
+      line-height: 1;
+      margin-bottom: 95px;
+      color: white;
+      text-align: center;
+      padding: 0 20px;
+
+      @media screen and (max-width: 768px) {
+        font-size: 35px;
+      }
+    }
+
+    .prize-pool {
+      animation: bounceInUp;
+      animation-duration: 1s;
+
+      width: 520px;
+      max-width: 90%;
+      height: 116px;
+      margin-inline: auto;
+
+      border: 1px solid #592ae6;
+      border-radius: 25px;
+      background: rgba(41, 12, 126, 0.44);
+
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+
+      position: relative;
+
+      @media screen and (max-width: 768px) {
+        width: 420px;
+      }
+      @media screen and (max-width: 576px) {
+        width: 70%;
+      }
+
+      span.main-price {
+        font-family: "Frizon", sans-serif;
+        color: #f7a62f;
+        font-size: 48px;
+
+        @media screen and (max-width: 768px) {
+          font-size: 38px;
+        }
+        @media screen and (max-width: 576px) {
+          font-size: 28px;
+        }
+      }
+
+      .prize-pool-top {
+        position: absolute;
+        top: -32px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        height: 48px;
+        font-size: 20px;
+
+        @media screen and (max-width: 768px) {
+          font-size: 18px;
+        }
+        @media screen and (max-width: 576px) {
+          font-size: 16px;
+        }
+
+        margin-bottom: 0.5rem;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        span {
+          font-family: "Frizon", sans-serif;
+          border-radius: 35px;
+          border: 2px solid #592ae6;
+          background: #290c7e;
+          color: #f7a62f;
+
+          position: relative;
+          z-index: 2;
+
+          padding: 10px 20px;
+
+          font-weight: 500;
+          line-height: 1.2;
+
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+
+      .prize-pool-top::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 75px;
+        background: url(../../img/prize/fire.png) 0 0 no-repeat;
+        background-size: 100% auto;
+        position: absolute;
+        left: 0;
+        top: -35px;
+        z-index: -1;
+      }
+
+      .prize-pool-bottom {
+        width: 370px;
+        height: 77px;
+        background: url(../../img/prize/prize4.png) 0 0 no-repeat;
+        background-size: contain;
+
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -60px;
+
+        @media screen and (max-width: 576px) {
+          width: 280px;
+        }
+        @media screen and (max-width: 450px) {
+          width: 240px;
+        }
+
+        span {
+          font-family: "Frizon", sans-serif;
+          display: block;
+          color: #b100ff;
+          font-size: 26px;
+          font-weight: 700;
+          text-align: center;
+          padding-top: 8px;
+
+          @media screen and (max-width: 768px) {
+            padding-top: 10px;
+            font-size: 22px;
+          }
+          @media screen and (max-width: 576px) {
+            padding-top: 6px;
+            font-size: 20px;
+          }
+          @media screen and (max-width: 450px) {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+
+    .prize-pool::before {
+      content: "";
+      width: 108px;
+      height: 108px;
+      display: block;
+      background: url(../../img/prize/prize1.png) 0 0 no-repeat;
+      background-size: cover;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: -54px;
+
+      @media screen and (max-width: 768px) {
+        width: 88px;
+        height: 88px;
+        left: -44px;
+      }
+      @media screen and (max-width: 576px) {
+        width: 68px;
+        height: 68px;
+        left: -34px;
+      }
+    }
+
+    .prize-pool::after {
+      content: "";
+      width: 148px;
+      height: 148px;
+      display: block;
+      background: url(../../img/prize/prize2.png) 0 0 no-repeat;
+      background-size: cover;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: -74px;
+
+      @media screen and (max-width: 768px) {
+        width: 108px;
+        height: 108px;
+        right: -54px;
+      }
+      @media screen and (max-width: 576px) {
+        width: 88px;
+        height: 88px;
+        right: -44px;
+      }
+    }
+
+    .btn-trade-and-win {
+      animation: bounceInUp;
+      animation-duration: 2s;
+
+      text-align: center;
+      margin-top: 100px;
+    }
+
+    .more-info {
+      animation: bounceInUp;
+      animation-duration: 2.5s;
+
+      text-align: center;
+      margin-top: 40px;
+      padding-bottom: 80px;
+
+      span {
+        display: inline-block;
+        color: $primary-color;
+        font-weight: 500;
+        font-size: 14px;
+        text-align: center;
+
+        &:hover {
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .middle {
+    background-image: url(../../img/prize/bg-middle.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+
+    position: relative;
+    z-index: 2;
+    padding-top: 95px;
+
+    .mid-title {
+      h4 {
+        color: hsla(0, 0%, 100%, 0.3);
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 10px;
+        text-align: center;
+      }
+
+      h2 {
+        font-family: "Frizon", sans-serif;
+        margin-bottom: 45px;
+        color: white;
+        font-size: 40px;
+        line-height: 42px;
+        height: 48px;
+        text-align: center;
+
+        @media screen and (max-width: 576px) {
+          font-size: 28px;
+        }
+      }
+    }
+
+    .mid-winner-box {
+      width: 458px;
+      max-width: 80%;
+      height: 104px;
+      margin: 0 auto 90px;
+      position: relative;
+      border: 2px solid #f7a62f;
+      border-radius: 27px;
+      background: linear-gradient(180deg, #020024, #7a4900 0, #342500);
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      p.winner-name {
+        font-size: 24px;
+        font-weight: bold;
+        color: #f7a62f;
+        text-transform: uppercase;
+        margin-bottom: -4px;
+      }
+
+      span.winner-date {
+        font-size: 15px;
+        color: white;
+        margin-bottom: 0;
+      }
+
+      .box-top {
+        height: 24px;
+        line-height: 22px;
+        padding: 0 15px;
+        font-size: 12px;
+        font-weight: bold;
+        color: #f7a62f;
+        text-transform: uppercase;
+        background: linear-gradient(45deg, #020024, #2c1d01 0, #2b1c01);
+        border-radius: 7px;
+        border: 1px solid #f7a62f;
+        position: absolute;
+        top: -12px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        width: 300px;
+
+        @media screen and (max-width: 576px) {
+          width: 200px;
+        }
+      }
+
+      .box-bottom {
+        width: 298px;
+        height: 66px;
+        background: url(../../img/prize/prize5.png) 0 0 no-repeat;
+        background-size: contain;
+        font-size: 20px;
+        font-weight: bold;
+        color: #b100ff;
+        position: absolute;
+        bottom: -55px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        padding-top: 8px;
+
+        @media screen and (max-width: 576px) {
+          width: 240px;
+          font-size: 18px;
+          padding-top: 5px;
+        }
+      }
+    }
+
+    .mid-winner-box::before {
+      content: "";
+      width: 98px;
+      height: 98px;
+      background: url(../../img/prize/prize6.png) 0 0 no-repeat;
+      background-size: cover;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: -40px;
+
+      @media screen and (max-width: 576px) {
+        display: none;
+      }
+    }
+
+    .mid-winner-box::after {
+      content: "";
+      width: 98px;
+      height: 98px;
+      background: url(../../img/prize/prize7.png) 0 0 no-repeat;
+      background-size: cover;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: -40px;
+
+      @media screen and (max-width: 576px) {
+        display: none;
+      }
+    }
+
+    .mid-table {
+      .ant-tabs-tab {
+        color: white;
+        font-weight: bold;
+        font-size: 22px;
+        padding-block: 6px;
+
+        @media screen and (max-width: 768px) {
+          font-size: 18px;
+        }
+      }
+
+      .streak-challenge-table-1 {
+        .t1-row {
+          background: $bg;
+        }
+        .t1-row td {
+          color: white;
+          font-size: 15px;
+
+          @media screen and (max-width: 768px) {
+            font-size: 14px;
+          }
+        }
+        .ant-table-thead > tr > th {
+          background: $main-dark !important;
+          color: white;
+          font-size: 15px;
+          font-weight: bold;
+
+          @media screen and (max-width: 768px) {
+            font-size: 14px;
+          }
+        }
+      }
+
+      .streak-challenge-table-1-pagination {
+        margin-top: 50px;
+        margin-bottom: 100px;
+        text-align: center;
+
+        li {
+          border-radius: 50%;
+
+          button {
+            border-radius: 50%;
+          }
+        }
+
+        .ant-pagination-item-active {
+          background-color: $primary-color;
+
+          a {
+            color: black;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+
+  .bottom {
+    background-image: url(../../img/prize/bg-bottom.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+
+    position: relative;
+    z-index: 2;
+    padding-top: 95px;
+    padding-bottom: 95px;
+
+    .bottom-title {
+      h4 {
+        color: #f7a62f;
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      h2 {
+        font-size: 40px;
+        font-weight: bold;
+        font-family: "Frizon", sans-serif;
+        margin-bottom: 20px;
+
+        @media screen and (max-width: 576px) {
+          font-size: 28px;
+        }
+      }
+    }
+
+    .bottom-list {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      @media screen and (max-width: 992px) {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+      }
+      @media screen and (max-width: 576px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @media screen and (max-width: 450px) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+      .item {
+        background-color: $main-light-over-dark;
+        border-radius: 5px;
+
+        width: 230px;
+        height: 260px;
+
+        @media screen and (max-width: 992px) {
+          width: 100%;
+        }
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          width: 80px;
+          height: 80px;
+          margin-bottom: 10px;
+        }
+
+        p {
+          text-transform: uppercase;
+          font-weight: bold;
+          font-size: 20px;
+          color: white;
+          margin-bottom: 10px;
+        }
+
+        span {
+          display: block;
+          text-align: center;
+          font-size: 14px;
+          color: whitesmoke;
+        }
+      }
+
+      .item + .item {
+        margin-left: 15px;
+
+        @media screen and (max-width: 992px) {
+          margin-left: 0;
+        }
+      }
+    }
+
+    .bottom-about {
+      margin-top: 50px;
+      color: whitesmoke;
+
+      .titlee {
+        font-weight: bold;
+        font-size: 24px;
+        margin-bottom: 12px;
+      }
+
+      p {
+        font-size: 15px;
+        line-height: 1.8;
+        margin-bottom: 30px;
+        text-align: justify;
+      }
+    }
+  }
+
+  .bottom::before {
+    content: "";
+    display: block;
+    width: 186px;
+    height: 186px;
+    background: url(../../img/prize/rocket1.png);
+    background-size: cover;
+    position: absolute;
+    top: -90px;
+    left: -40px;
+
+    @media screen and (max-width: 992px) {
+      width: 148px;
+      height: 148px;
+      top: -50px;
+    }
+  }
+
+  .bottom::after {
+    content: "";
+    display: block;
+    width: 278px;
+    height: 278px;
+    background: url(../../img/prize/rocket2.png);
+    background-size: cover;
+    position: absolute;
+    top: 80px;
+    right: 0px;
+
+    @media screen and (max-width: 1200px) {
+      display: none;
+    }
+  }
+}

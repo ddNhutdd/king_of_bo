@@ -1,0 +1,12 @@
+.deposit {
+  // animation: fadeInRight;
+  // animation-duration: 0.5s;
+
+  .wallets {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+
+    margin-bottom: 30px;
+  }
+}

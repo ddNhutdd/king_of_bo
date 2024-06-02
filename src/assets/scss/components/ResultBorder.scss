@@ -1,0 +1,221 @@
+.ant-modal.modal-result-chartpane {
+  .ant-modal-content {
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .ant-modal-body {
+    padding: 0;
+    background: transparent;
+  }
+
+  .result {
+    width: 100%;
+    height: 400px;
+
+    background-image: url(../../img/svg/winBoxIcon.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+      color: whitesmoke;
+      font-size: 40px;
+      font-weight: bold;
+      animation: bounceIn;
+      animation-duration: 3s;
+      margin: 0;
+      margin-top: 50px;
+    }
+
+    p {
+      font-size: 50px;
+      font-weight: bold;
+      margin: 0;
+
+      i {
+        margin: 0 5px;
+        font-size: 45px;
+      }
+    }
+  }
+
+  .result.result-false {
+    p {
+      color: $red;
+    }
+  }
+
+  .result.result-true {
+    p {
+      color: $green;
+    }
+  }
+
+  .result-streak {
+    width: 100%;
+    height: 590px;
+
+    background-image: url(../../img/svg/winBoxIconStreak.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 30%;
+      height: auto;
+      margin-top: 30px;
+    }
+
+    h1 {
+      color: orange;
+      font-size: 26px;
+      font-weight: bold;
+      margin: 0;
+      margin-top: 10px;
+
+      @media screen and (max-width: 576px) {
+        font-size: 24px;
+      }
+    }
+
+    h3 {
+      color: whitesmoke;
+      font-size: 20px;
+      font-weight: 600;
+      margin: 0;
+      margin-bottom: 8px;
+
+      @media screen and (max-width: 576px) {
+        font-size: 18px;
+      }
+    }
+
+    p {
+      font-size: 25px;
+      font-weight: bold;
+      margin: 0;
+      color: orange;
+      border: 2px solid orange;
+      border-radius: 12px;
+      padding: 1px 16px;
+      background-color: $bg;
+      margin-block: 15px;
+
+      @media screen and (max-width: 576px) {
+        margin-block: 5px;
+        font-size: 20px;
+      }
+    }
+
+    span.span-note {
+      max-width: 60%;
+      text-align: center;
+      font-size: 14px;
+      display: block;
+      margin-bottom: 30px;
+
+      @media screen and (max-width: 576px) {
+        max-width: 80%;
+        font-size: 13px;
+        margin-bottom: 20px;
+      }
+
+      span:first-child {
+        color: orange;
+        font-weight: bold;
+      }
+
+      span:last-child {
+        color: whitesmoke;
+      }
+    }
+  }
+}
+
+.ant-modal.modal-result-chartpane-mobile {
+  .ant-modal-content {
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .ant-modal-body {
+    padding: 0;
+    background: transparent;
+  }
+
+  .result {
+    width: 100%;
+    height: 350px;
+
+    @media screen and (max-width: 500px) {
+      height: 300px;
+    }
+
+    background-image: url(../../img/result-border.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+      color: whitesmoke;
+      font-size: 30px;
+      font-weight: bold;
+      animation: bounceIn;
+      animation-duration: 3s;
+      margin: 0;
+      margin-top: 30px;
+
+      @media screen and (max-width: 576px) {
+        font-size: 27px;
+      }
+    }
+
+    p {
+      font-size: 40px;
+      font-weight: bold;
+      margin: 0;
+
+      @media screen and (max-width: 576px) {
+        font-size: 35px;
+      }
+
+      i {
+        margin: 0 5px;
+        font-size: 35px;
+
+        @media screen and (max-width: 576px) {
+          font-size: 30px;
+          margin: 0 3px;
+        }
+      }
+    }
+  }
+
+  .result.result-false {
+    p {
+      color: $red;
+    }
+  }
+
+  .result.result-true {
+    p {
+      color: $green;
+    }
+  }
+}

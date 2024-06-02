@@ -1,0 +1,89 @@
+@import "../base/base.scss";
+
+.user {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+
+  @media screen and (max-width: 992px) {
+    grid-template-columns: 1fr;
+  }
+
+  .tree {
+    position: relative;
+    line-height: 2;
+    color: black;
+
+    background: white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 5px;
+    padding: 30px;
+
+    @media screen and (max-width: 576px) {
+      padding: 20px;
+    }
+
+    span {
+      font-style: italic;
+      color: grey;
+    }
+
+    .fa-user,
+    .fa-users,
+    .fa-house-user {
+      font-size: 16px;
+      color: $primary-color;
+      margin-right: 8px;
+    }
+
+    ul {
+      padding-left: 15px;
+      list-style: none;
+
+      li {
+        position: relative;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 15px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+
+        &:before {
+          position: absolute;
+          top: 15px;
+          left: 0;
+          width: 10px;
+          height: 1px;
+          margin: auto;
+          content: "";
+          background-color: #666;
+        }
+
+        &:after {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          width: 1px;
+          height: 100%;
+          content: "";
+          background-color: #666;
+        }
+
+        &:last-child:after {
+          height: 15px;
+        }
+      }
+    }
+
+    .title {
+      font-size: 20px;
+      font-weight: 500;
+      color: $primary-color;
+      margin-bottom: 15px;
+    }
+  }
+}

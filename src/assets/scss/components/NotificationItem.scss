@@ -1,0 +1,83 @@
+.notification-item-rfc {
+  display: flex;
+  gap: 20px;
+  padding: 8px 16px;
+  background-color: #080d1f;
+  cursor: pointer;
+  position: relative;
+
+  &:hover {
+    background-color: #02142b;
+  }
+
+  .left {
+    i {
+      color: white;
+      font-size: 14px;
+      margin-right: 12px;
+      transform: translateY(2px);
+    }
+
+    i.bell-golden {
+      color: rgb(255, 199, 95);
+    }
+  }
+
+  .right {
+    h4.noti-title {
+      color: white;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 3px;
+      padding-right: 24px;
+    }
+
+    h4.noti-title.title-golden {
+      color: rgb(255, 199, 95);
+    }
+
+    div.noti-content {
+      color: rgb(150, 150, 150);
+      font-size: 13px;
+      margin-bottom: 4px;
+      padding-right: 25px;
+      line-height: 1.3;
+    }
+
+    div.noti-content.content-golden {
+      color: whitesmoke;
+      font-size: 15px;
+    }
+
+    span.noti-time {
+      color: grey;
+      font-size: 13px;
+      background-color: #041b38;
+      display: inline-block;
+      padding: 1px 5px;
+      border-radius: 3px;
+    }
+  }
+
+  .fa-solid.fa-circle {
+    position: absolute;
+    top: 17px;
+    right: 10px;
+    font-size: 10px;
+  }
+  .fa-solid.fa-circle.not-seen {
+    color: $primary-color;
+  }
+  .fa-solid.fa-circle.seen {
+    color: rgb(60, 60, 60);
+  }
+}
+
+.notification-item-rfc.seen {
+  opacity: 0.75;
+}
+
+.notification-divider {
+  margin: 0 !important;
+  background-color: rgb(10, 10, 10) !important;
+}

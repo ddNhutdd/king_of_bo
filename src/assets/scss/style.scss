@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import "./components/Header.scss";
+@import "./components/Login.scss";
+@import "./components/Signup.scss";
+@import "./components/Footer.scss";
+@import "./components/KYC.scss";
+@import "./components/Admin.scss";
+@import "./components/ManageKYCUsers.scss";
+@import "./components/ManageUsers.scss";
+@import "./components/Deposit.scss";
+@import "./components/Wallet.scss";
+@import "./components/WalletNew.scss";
+@import "./components/DepositHistory.scss";
+@import "./components/Withdraw.scss";
+@import "./components/WithdrawHistory.scss";
+@import "./components/ManageWithdrawals.scss";
+@import "./components/ManageDeposit.scss";
+@import "./components/ManageTransfer.scss";
+@import "./components/Profile.scss";
+@import "./components/UserWallet.scss";
+@import "./components/Chart.scss";
+@import "./components/ChartFooter.scss";
+@import "./components/ChartPane.scss";
+@import "./components/ChartHistory.scss";
+@import "./components/Trade.scss";
+@import "./components/Home.scss";
+@import "./components/TransferChild.scss";
+@import "./components/TransferHistory.scss";
+@import "./components/Commission.scss";
+@import "./components/Affiliate.scss";
+@import "./components/Challenge.scss";
+@import "./components/DrawerSidePane.scss";
+@import "./components/AdminHistoryOrder.scss";
+@import "./components/AdminHistoryProfit.scss";
+@import "./components/AdminHistorySetResult.scss";
+@import "./components/ManagePrizePool.scss";
+@import "./components/Loader.scss";
+@import "./components/NewDashboard.scss";
+@import "./components/Gauge.scss";
+@import "./components/QuickDeposit.scss";
+@import "./components/NotificationItem.scss";
+@import "./components/ResultBorder.scss";
+@import "./components/SecurityProfile.scss";
+@import "./components/WithdrawWrap.scss";
+@import "./components/MainWallet.scss";
+@import "./components/ModalCustom.scss";
+@import "./components/MainWalletModalContent.scss";
+@import "./components/InputWidthImage.scss";
+@import "./components/WalletNewDeposit.scss";
+@import "./components/ButtonCustom.scss";
+@import "./components/AlertCustom.scss";
+@import "./components/InputWidthTitle.scss";
+@import "./components/WalletNewWithdraw.scss";
+@import "./components/TradeWallet.scss";
+@import "./components/TradeWalletModalContent.scss";
+@import "./components/SelectCustom.scss";
+@import "./components/DrawerKeyboard.scss";
+@import "./components/ProfileNewCard.scss";
+@import "./components/ProfileNew.scss";
+@import "./components/InputGroup.scss";
+@import "./components/SwitchCustom.scss";
+@import "./components/AvatarModalContent.scss";
+@import "./components/VerifyProfileModalContent.scss";
+@import "./components/TwoFaVerifyModalContent.scss";
+@import "./components/ProfileChangePass.scss";
+@import "./components/ProfileChangePassGroup.scss";
+
+@import "./pages/SignupPage.scss";
+@import "./pages/LoginPage.scss";
+@import "./pages/VerifyPage.scss";
+@import "./pages/VerifyTokenPage.scss";
+@import "./pages/Page404.scss";
+
+@import "./templates/AdminTemplate.scss";
+@import "./templates/NavbarAdmin.scss";
+@import "./templates/SidebarAdmin.scss";
+
+@import "../../newComponents/Template/Navbar.scss";
+@import "../../newComponents/Template/Sidebar.scss";
+
+@import "../../newComponents/VIPMember/General.scss";
+@import "../../newComponents/VIPMember/VIPCommission.scss";
+@import "../../newComponents/VIPMember/VIPNetwork.scss";
+
+@import "../../newComponents/Mobile/Order.scss";
+@import "../../newComponents/Mobile/Setting.scss";
+
+@import "../../newComponents/Admin/ManageUserNetwork.scss";
+@import "../../newComponents/Admin/SendToUser.scss";
+
+@import "../../templates/UserTemplateNew.scss";

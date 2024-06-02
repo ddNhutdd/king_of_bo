@@ -1,0 +1,16 @@
+.select-custom {
+	width: 100%;
+
+	.header {
+		width: 100%;
+	}
+}
+
+.select-custom-menu {
+	position: fixed;
+	display: none;
+
+	&.show {
+		display: block;
+	}
+}

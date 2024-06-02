@@ -1,0 +1,37 @@
+.main-wallet-modal {
+	.header {
+		display: flex;
+		align-items: center;
+		border-bottom: 2px solid #1F2F43;
+
+		.item {
+			font-weight: 700;
+			width: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 14px 16px;
+			position: relative;
+			cursor: pointer;
+
+			&.active {
+				&::after {
+					content: '';
+					display: block;
+					position: absolute;
+					top: calc(100% - 3px);
+					left: 50%;
+					transform: translateX(-50%);
+					height: 4px;
+					width: 70%;
+					background: #0897e7;
+					border-radius: 3px 3px 0 0;
+				}
+			}
+		}
+	}
+
+	.content {
+		padding: 16px;
+	}
+}

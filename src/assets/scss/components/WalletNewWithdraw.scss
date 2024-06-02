@@ -1,0 +1,84 @@
+.wallet-new-withdraw {
+	.network {
+		font-size: 12px;
+		margin-bottom: 15px;
+		margin-top: 16px;
+	}
+
+	.row-action {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		font-size: 12px;
+		line-height: 13px;
+		color: #7c7c7c;
+		margin-bottom: 15px;
+
+		.action-item {
+			flex: 1;
+
+			position: relative;
+
+			img {
+				width: 20px;
+				height: 20px;
+				display: none;
+				object-fit: cover;
+				position: absolute;
+				top: -5px;
+				right: -5px;
+
+				&.active {
+					display: block;
+				}
+			}
+
+			.top {
+				margin-bottom: 2px;
+				font-weight: 700;
+
+				&.active {
+					color: #fff;
+				}
+			}
+
+			.bot {
+				&.active {
+					color: #ffffff80;
+				}
+
+				&.fee {
+					font-weight: 700;
+					color: #ffba00 !important;
+				}
+			}
+		}
+	}
+
+	.input-container {
+		margin-top: 20px;
+
+		.paste-text {
+			color: #ffc400;
+			line-height: 20px;
+			cursor: pointer;
+		}
+	}
+
+	.widthraw {
+		margin-top: 20px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		.note {
+			font-style: italic;
+			display: block;
+			clear: both;
+			margin-bottom: 5px;
+			color: #fa2843;
+			font-size: 80%;
+			font-weight: 400;
+		}
+	}
+}

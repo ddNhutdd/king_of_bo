@@ -1,0 +1,207 @@
+@mixin paddingConfig {
+	padding: 32px;
+
+	@media screen and (max-width: 576px) {
+		padding: 16px;
+	}
+}
+
+.trade-wallet-modal-content {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+
+	.title {
+		@include paddingConfig();
+		display: none;
+		font-size: 24px;
+		color: #fff;
+		font-weight: 700;
+		height: 102px;
+
+		@media screen and (max-width:576px) {
+			display: block;
+		}
+	}
+
+	.item-container {
+		display: flex;
+		position: relative;
+
+		.item {
+			@include paddingConfig();
+			width: 500px;
+
+			@media screen and (max-width: 576px) {
+				background: #02142B;
+			}
+
+			&:nth-of-type(1) {
+				border-right: 1px solid #ffffff2b;
+
+				@media screen and (max-width: 576px) {
+					border-color: #ffffff33;
+				}
+
+			}
+
+			.name {
+				display: flex;
+				justify-content: center;
+				font-size: 14px;
+				margin-bottom: 8px;
+				color: #fff;
+
+				span {
+					color: #ffc400;
+					margin-right: 5px;
+					margin-left: 5px;
+				}
+			}
+
+			.value {
+				display: flex;
+				justify-content: center;
+				font-size: 26px;
+				color: #fff;
+			}
+		}
+
+		.switch-button {
+			width: 40px;
+			height: 40px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+
+			svg {
+				width: 100%;
+				height: 100%;
+				cursor: pointer;
+			}
+		}
+	}
+
+	.input-container {
+		@include paddingConfig();
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		@media screen and (max-width: 576px) {
+			display: none;
+		}
+
+		.input {
+			width: 80%;
+			display: flex;
+			gap: 5px;
+			background: #fff;
+			border-radius: 5px;
+			padding-left: 10px;
+
+			input {
+				flex: 1;
+				width: 100%;
+				border: none;
+				outline: none;
+				background: transparent;
+				color: #000;
+				height: 40px;
+
+				&::placeholder {
+					color: #000;
+				}
+			}
+
+			span {
+				width: fit-content;
+				font-size: 16px;
+				color: #ffc400;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				padding: 5px;
+				cursor: pointer;
+				white-space: nowrap;
+			}
+		}
+	}
+
+	.input-small-device {
+		@include paddingConfig();
+		display: none;
+
+		@media screen and (max-width: 576px) {
+			display: block;
+		}
+
+		.title {
+			font-size: 12px;
+			padding: 0;
+			height: unset;
+		}
+
+		.content {
+			display: flex;
+			align-items: center;
+			padding-top: 4px;
+			padding-bottom: 4px;
+			border-bottom: 1px solid #ffffff33;
+
+			input {
+				flex: 1;
+				background: transparent;
+				border: 0;
+				outline: 0;
+			}
+
+			img {
+				width: 30px;
+				height: 30px;
+				padding-right: 5px;
+				border-right: 1px solid #ffffff33;
+			}
+
+			.text {
+				padding-left: 5px;
+				color: #ffc400;
+			}
+		}
+	}
+
+	.note-container {
+		@include paddingConfig();
+		display: none;
+
+		@media screen and (max-width: 576px) {
+			display: block;
+		}
+
+		.note {
+			background: #02142B;
+			padding: 16px;
+			border-radius: 5px;
+		}
+	}
+
+	.action {
+		margin-top: -16px;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 0 32px 32px 32px;
+		display: flex;
+		align-items: flex-end;
+		width: 82%;
+		height: 100%;
+
+		button {
+			width: 100;
+
+			@media screen and (max-width: 576px) {
+				margin-top: auto !important;
+			}
+		}
+	}
+}

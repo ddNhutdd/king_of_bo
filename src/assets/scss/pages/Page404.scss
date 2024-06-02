@@ -1,0 +1,111 @@
+@import "../base/base.scss";
+
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin-inline: auto;
+  padding-inline: 30px;
+}
+
+.page-404 {
+  width: 100%;
+  height: 100vh;
+  min-height: 100vh;
+  max-height: 100vh;
+
+  background-image: url("../../../assets/img/bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  .p404-navbar {
+    width: 100%;
+    height: 90px;
+    padding-block: 20px;
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      .left.logo {
+        img {
+          width: 176px;
+          height: 50px;
+          cursor: pointer;
+
+          @media screen and (max-width: 768px) {
+            width: 141px;
+            height: 40px;
+          }
+        }
+      }
+
+      .right.actions {
+        button + button {
+          margin-left: 20px;
+
+          @media screen and (max-width: 768px) {
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  .p404-content {
+    width: 100%;
+    height: calc(100vh - 90px);
+
+    .container {
+      width: 100%;
+      height: 100%;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      h1.title {
+        color: whitesmoke;
+        font-weight: bold;
+        font-size: 2.5rem;
+        text-align: center;
+
+        @media screen and (max-width: 768px) {
+          font-size: 2rem;
+        }
+      }
+
+      h3.subtitle {
+        color: rgb(214, 214, 214);
+        font-size: 1.1rem;
+        padding-inline: 430px;
+        text-align: center;
+
+        @media screen and (max-width: 1300px) {
+          padding-inline: 300px;
+        }
+        @media screen and (max-width: 992px) {
+          padding-inline: 150px;
+        }
+        @media screen and (max-width: 576px) {
+          padding-inline: 50px;
+        }
+        @media screen and (max-width: 450px) {
+          padding-inline: 0px;
+        }
+      }
+
+      button {
+        margin-block: 50px;
+
+        span {
+          font-size: 1.1rem;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}

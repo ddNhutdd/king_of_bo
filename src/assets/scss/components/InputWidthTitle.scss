@@ -1,0 +1,45 @@
+.input-width-title {
+	width: 100%;
+	background: transparent;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 5px;
+	position: relative;
+	height: 46px;
+	border: 1px solid #ffffff3b;
+	border-radius: 8px;
+	padding-left: 10px;
+	padding-right: 10px;
+
+	.title {
+		color: #ffffff80;
+		font-size: 12px;
+		position: absolute;
+		top: -10px;
+		left: 30px;
+		background: #02142B;
+		padding: 0 5px;
+		white-space: nowrap;
+	}
+
+	.input {
+		flex: 1;
+
+		input {
+			max-width: 100%;
+			outline: none;
+			border: none;
+			color: #fff;
+			background: transparent;
+
+			&::placeholder {
+				color: #ffffff80;
+			}
+		}
+	}
+
+	.button {
+		width: fit-content;
+	}
+}

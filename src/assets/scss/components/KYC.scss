@@ -1,0 +1,67 @@
+@import "../base/base.scss";
+
+.kyc {
+  width: 60%;
+  margin-inline: auto;
+  border: 2px solid $main-light-over-dark;
+  padding: 15px 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 30px;
+
+  @media screen and (max-width: 1500px) {
+    width: 75%;
+  }
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+
+  .title {
+    font-size: 20px;
+    font-weight: 600;
+    color: $primary-color;
+    margin-bottom: 25px;
+  }
+
+  .kyc-note-922023 {
+    margin-bottom: 30px;
+
+    .p-wrapper {
+      display: flex;
+      margin-bottom: 6px;
+
+      i {
+        font-size: 16px;
+        margin-right: 10px;
+        color: whitesmoke;
+        transform: translateY(2px);
+      }
+
+      p {
+        margin-bottom: 0px;
+        font-size: 14px;
+        color: rgb(223, 223, 223);
+      }
+    }
+  }
+
+  form {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+
+    @media screen and (max-width: 1200px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (max-width: 992px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 4px;
+    }
+  }
+}

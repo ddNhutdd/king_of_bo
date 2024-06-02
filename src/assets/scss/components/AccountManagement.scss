@@ -1,0 +1,85 @@
+.acc-manage,
+.acc-list-user-f1 {
+  width: 100%;
+  background: inherit;
+  color: inherit;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 5px;
+  padding: 30px;
+
+  @media screen and (max-width: 576px) {
+    padding: 20px;
+  }
+
+  .title-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    @media screen and (max-width: 992px) {
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+  }
+
+  .title {
+    font-size: 20px;
+    font-weight: 500;
+    color: $primary-color;
+    margin-bottom: 25px;
+  }
+
+  .select-box {
+    @media screen and (max-width: 992px) {
+      width: 100%;
+      margin-bottom: 25px;
+      text-align: right;
+    }
+
+    div {
+      text-align: left;
+    }
+  }
+
+  .pagination-box {
+    @media screen and (max-width: 992px) {
+      width: 100%;
+      margin-bottom: 25px;
+      text-align: right;
+    }
+  }
+}
+
+.referral-link {
+  background: inherit;
+  color: inherit;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 5px;
+  padding: 30px;
+  height: fit-content;
+
+  @media screen and (max-width: 576px) {
+    padding: 20px;
+  }
+
+  .referral-link-action {
+    margin-top: 8px;
+    display: flex;
+
+    button + button {
+      margin-left: 8px;
+    }
+  }
+
+  .title {
+    font-size: 20px;
+    font-weight: 500;
+    color: $primary-color;
+    margin-bottom: 15px;
+  }
+
+  input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}

@@ -1,0 +1,156 @@
+.admin-sendtouser-email {
+  padding-top: 20px;
+
+  .ezone-1 {
+    display: flex;
+
+    @media screen and (max-width: 992px) {
+      display: block;
+    }
+
+    .email-receiver {
+      @media screen and (max-width: 992px) {
+        display: flex;
+        flex-direction: column;
+      }
+
+      p {
+        display: inline-block;
+        margin-right: 10px;
+        font-size: 14px;
+        color: white;
+        min-width: 100px;
+        margin-bottom: 0;
+
+        @media screen and (max-width: 992px) {
+          margin-bottom: 5px;
+        }
+      }
+    }
+
+    .email-address {
+      margin-left: 20px;
+
+      @media screen and (max-width: 992px) {
+        margin-left: 0;
+        margin-top: 20px;
+      }
+    }
+  }
+
+  .ezone-2 {
+    margin-top: 20px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+
+    .ezone2-title,
+    .ezone2-content {
+      display: flex;
+
+      @media screen and (max-width: 992px) {
+        display: block;
+      }
+
+      p {
+        font-size: 14px;
+        color: white;
+        min-width: 100px;
+        margin-right: 10px;
+        margin-bottom: 0;
+
+        @media screen and (max-width: 992px) {
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+
+  .ezone-3 {
+    margin-top: 20px;
+    margin-left: 110px;
+
+    @media screen and (max-width: 992px) {
+      margin-left: 0;
+    }
+  }
+}
+
+.admin-sendtouser-noti {
+  padding-top: 20px;
+
+  .ezone-1 {
+    display: flex;
+    @media screen and (max-width: 992px) {
+      display: block;
+    }
+
+    .noti-receiver {
+      p {
+        display: inline-block;
+        margin-right: 10px;
+        font-size: 14px;
+        color: white;
+        min-width: 150px;
+        margin-bottom: 0;
+
+        @media screen and (max-width: 992px) {
+          margin-bottom: 5px;
+        }
+      }
+
+      @media screen and (max-width: 992px) {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    .email-address {
+      margin-left: 20px;
+
+      @media screen and (max-width: 992px) {
+        margin-left: 0;
+        margin-top: 20px;
+      }
+    }
+  }
+
+  .ezone-2 {
+    margin-top: 20px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+
+    .ezone2-title,
+    .ezone2-content {
+      display: flex;
+
+      @media screen and (max-width: 992px) {
+        display: block;
+      }
+
+      p {
+        font-size: 14px;
+        color: white;
+        min-width: 150px;
+        margin-right: 10px;
+        margin-bottom: 0;
+
+        @media screen and (max-width: 992px) {
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+
+  .ezone-3 {
+    margin-top: 20px;
+    margin-left: 160px;
+
+    @media screen and (max-width: 992px) {
+      margin-left: 0px;
+    }
+  }
+}

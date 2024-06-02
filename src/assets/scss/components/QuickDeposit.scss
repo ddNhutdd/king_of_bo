@@ -1,0 +1,44 @@
+.quickDepositInModal {
+  padding-block: 10px;
+
+  .row1.chooseWallet {
+    margin-bottom: 20px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    label {
+      display: inline-block;
+      margin-right: 15px;
+      margin-bottom: 0;
+    }
+  }
+
+  .row2.qrCode {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .row3.action {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    .asInput {
+      font-size: 15px;
+      font-weight: 600;
+      max-width: 80%;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  }
+
+  label {
+    font-size: 15px;
+    display: block;
+    margin-bottom: 4px;
+  }
+}

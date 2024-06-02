@@ -1,0 +1,30 @@
+.withdrawWrap-sas {
+  .btns-type {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
+    padding-top: 20px;
+    padding-bottom: 35px;
+
+    button {
+      width: 100%;
+      height: 65px;
+      font-weight: 600 !important;
+
+      div {
+        font-size: 18px;
+      }
+
+      .feefee {
+        font-size: 14px;
+        font-weight: normal !important;
+      }
+    }
+
+    .ant-btn-primary {
+      color: black !important;
+    }
+  }
+}
